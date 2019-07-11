@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProgressCollectionCell" id="kfV-Mf-qWT" customClass="ProgressCollectionCell" customModule="ProgressKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgt-al-4mp" userLabel="contentView">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVn-vR-kpT">
+                                <rect key="frame" x="16" y="-7" width="88" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fv-s7-VT9" userLabel="leadingTitleLabel" customClass="UnicodeLabel" customModule="ProgressKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="-0.59999999999999998"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="JUm-pf-AF3">
+                                        <rect key="frame" x="38" y="0.0" width="0.0" height="50"/>
+                                        <color key="color" cocoaTouchSystemColor="lightTextColor"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kS-UMM" userLabel="trailingTitleLabel" customClass="UnicodeLabel" customModule="ProgressKit" customModuleProvider="target">
+                                        <rect key="frame" x="38" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Cxt-yW-dwq"/>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GYZ-PW-zpS" userLabel="progressView">
+                                <rect key="frame" x="16" y="43" width="88" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="ySa-mf-NYN"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOL-ho-2Go" userLabel="leadingDetailLabel" customClass="UnicodeLabel" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="16" y="49" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="-0.40000000000000002"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-HW-pCO" userLabel="trailingDetailLabel" customClass="UnicodeLabel" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="104" y="49" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="-0.40000000000000002"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jOL-ho-2Go" firstAttribute="top" secondItem="GYZ-PW-zpS" secondAttribute="bottom" constant="4" id="CiE-QM-4fR"/>
+                            <constraint firstItem="NVn-vR-kpT" firstAttribute="leading" secondItem="GYZ-PW-zpS" secondAttribute="leading" id="E2i-Iv-TUE"/>
+                            <constraint firstItem="GYZ-PW-zpS" firstAttribute="top" secondItem="NVn-vR-kpT" secondAttribute="bottom" id="Vy9-dm-QBO"/>
+                            <constraint firstItem="NVn-vR-kpT" firstAttribute="trailing" secondItem="GYZ-PW-zpS" secondAttribute="trailing" id="d1D-9i-jyQ"/>
+                            <constraint firstAttribute="trailing" secondItem="GYZ-PW-zpS" secondAttribute="trailing" constant="16" id="dVs-Tw-wqw"/>
+                            <constraint firstItem="Cot-HW-pCO" firstAttribute="trailing" secondItem="GYZ-PW-zpS" secondAttribute="trailing" id="fBR-kh-kHE"/>
+                            <constraint firstItem="jOL-ho-2Go" firstAttribute="leading" secondItem="GYZ-PW-zpS" secondAttribute="leading" id="hYu-Hn-pYY"/>
+                            <constraint firstItem="GYZ-PW-zpS" firstAttribute="centerY" secondItem="wgt-al-4mp" secondAttribute="centerY" constant="4" id="t1A-MQ-7Up"/>
+                            <constraint firstItem="GYZ-PW-zpS" firstAttribute="leading" secondItem="wgt-al-4mp" secondAttribute="leading" constant="16" id="uJQ-fH-aHs"/>
+                            <constraint firstItem="Cot-HW-pCO" firstAttribute="top" secondItem="GYZ-PW-zpS" secondAttribute="bottom" constant="4" id="w4D-k0-paD"/>
+                            <constraint firstItem="GYZ-PW-zpS" firstAttribute="centerX" secondItem="wgt-al-4mp" secondAttribute="centerX" id="zIG-DY-eyL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wgt-al-4mp" secondAttribute="bottom" id="CzS-si-PIZ"/>
+                <constraint firstAttribute="trailing" secondItem="wgt-al-4mp" secondAttribute="trailing" id="ZnO-ES-89W"/>
+                <constraint firstItem="wgt-al-4mp" firstAttribute="top" secondItem="kfV-Mf-qWT" secondAttribute="top" id="iJ4-FA-ZsN"/>
+                <constraint firstItem="wgt-al-4mp" firstAttribute="leading" secondItem="kfV-Mf-qWT" secondAttribute="leading" id="k2W-2U-g2P"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="PkO-AO-VmH"/>
+            <connections>
+                <outlet property="activityIndicator" destination="JUm-pf-AF3" id="oCq-j5-MY4"/>
+                <outlet property="leadingDetailLabel" destination="jOL-ho-2Go" id="WoF-ya-rIt"/>
+                <outlet property="leadingTitleLabel" destination="9fv-s7-VT9" id="GA0-u5-AOk"/>
+                <outlet property="progressView" destination="GYZ-PW-zpS" id="Adk-bd-mMd"/>
+                <outlet property="progressViewCenterYConstraint" destination="t1A-MQ-7Up" id="5Lk-AU-6Kw"/>
+                <outlet property="progressViewHeightConstraint" destination="ySa-mf-NYN" id="xhF-Mv-mPJ"/>
+                <outlet property="progressViewTopMarginConstraint" destination="Vy9-dm-QBO" id="mVT-jA-LAd"/>
+                <outlet property="stackView" destination="NVn-vR-kpT" id="doi-zg-3bI"/>
+                <outlet property="trailingDetailLabel" destination="Cot-HW-pCO" id="jfy-yy-4QN"/>
+                <outlet property="trailingTitleLabel" destination="Vk4-kS-UMM" id="FVN-IA-QAa"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>behindSchedule</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Hurry up!</string>
+			<string>You can do better!</string>
+			<string>Go on!</string>
+			<string>Speed up!</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>Otherwise you&apos;ll miss &quot;%@&quot;.</string>
+			<string>Start doing some progress for &quot;%@&quot;.</string>
+			<string>Give &quot;%@&quot; some love.</string>
+			<string>&quot;%@&quot; needs your attention. </string>
+		</array>
+	</dict>
+	<key>onSchedule</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>You&apos;re doing good.</string>
+			<string>Not bad.</string>
+			<string>Keep going!</string>
+			<string>Nice flow!</string>
+			<string>Keep rolling!</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>You&apos;re right on time for &quot;%@&quot;.</string>
+			<string>&quot;%@&quot; is on track - but there&apos;s still work to do.</string>
+			<string>Keep this pace and you&apos;ll complete &quot;%@&quot; on time. </string>
+			<string>&quot;%@&quot; is doing fine!</string>
+		</array>
+	</dict>
+	<key>beforeSchedule</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Take a break!</string>
+			<string>Good work!</string>
+			<string>Way to go!</string>
+			<string>Awesome!</string>
+			<string>Your hard work pays off!</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>Completing &quot;%@&quot; seems rather easy for you!</string>
+			<string>You&apos;re way before schedule for &quot;%@&quot;</string>
+			<string>If you keep this pace, &quot;%@&quot; will be done even before your deadline. </string>
+		</array>
+	</dict>
+	<key>success</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Excellent! 🏅</string>
+			<string>Outstanding!</string>
+			<string>Fantastic!</string>
+			<string>Keep up the great work!</string>
+			<string>Exceptional!</string>
+			<string>Fabulous!</string>
+			<string>Congratulations! 🎈</string>
+			<string>Fantastic!</string>
+			<string>Sensational! 🎉</string>
+			<string>Wonderful! 💐</string>
+			<string>Marvelous! ✨</string>
+			<string>First class job. 👍</string>
+			<string>You are fantastic.</string>
+			<string>You did it!</string>
+			<string>You hit the target. 🎯</string>
+			<string>Nothing can stop you now. 🚀</string>
+			<string>That’s really nice work!</string>
+			<string>You’re doing beautifully!</string>
+			<string>That’s the way to do it. 💯</string>
+			<string>Nice going!</string>
+			<string>That’s right!</string>
+			<string>Well done. 👌</string>
+			<string>Great work!</string>
+			<string>You got it!</string>
+			<string>Tremendous job!</string>
+			<string>That’s coming along nicely.</string>
+			<string>You’re doing a great job.</string>
+			<string>Time to celebrate! 🥳</string>
+			<string>You rock! 🎸</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>&quot;%@&quot; is done.</string>
+			<string>You completed &quot;%@&quot;.</string>
+			<string>&quot;%@&quot; is completed.</string>
+			<string>You reached &quot;%@&quot;.</string>
+			<string>&quot;%@&quot; achieved.</string>
+			<string>&quot;%@&quot; is accomplished.</string>
+			<string>You accomplished &quot;%@&quot;.</string>
+			<string>You managed to get &quot;%@&quot; done.</string>
+			<string>You finished &quot;%@&quot;.</string>
+			<string>You got &quot;%@&quot; done.</string>
+		</array>
+	</dict>
+</dict>
+</plist>

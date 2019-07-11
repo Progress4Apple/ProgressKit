@@ -1,0 +1,2 @@
+github "Giphy/giphy-ios-sdk-core" ~> 1.4
+github "Flipboard/FLAnimatedImage" ~> 1.0

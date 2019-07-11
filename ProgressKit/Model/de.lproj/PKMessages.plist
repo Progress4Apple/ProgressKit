@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>behindSchedule</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Beeilung!</string>
+			<string>Zeit loszulegen!</string>
+			<string>Komm in die Puschen!</string>
+			<string>Hopp hopp!</string>
+			<string>Volle Kraft voraus!</string>
+			<string>Tempo!</string>
+			<string>Leg einen Gang zu!</string>
+			<string>Knappe Kiste.</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>Du hinkst deinem Zeitplan für &quot;%@&quot; hinterher.</string>
+			<string>Wenn Du so weitermachst, erreichts du dein Ziel &quot;%@&quot; nicht.</string>
+			<string>Sonst wird das nix mit &quot;%@&quot;.</string>
+			<string>Das wird knapp mit &quot;%@&quot;.</string>
+		</array>
+	</dict>
+	<key>onSchedule</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Weiter so!</string>
+			<string>So muss das!</string>
+			<string>Gute Arbeit!</string>
+			<string>Tip top!</string>
+			<string>Jawoll!</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>Für &quot;%@&quot; verläuft alles nach Plan.</string>
+			<string>Du kommst für &quot;%@&quot; gut voran.</string>
+			<string>Dein Fortschritt bei &quot;%@&quot; sieht gut aus. </string>
+			<string>&quot;%@&quot; läuft bei dir wie am Schnürchen. </string>
+		</array>
+	</dict>
+	<key>beforeSchedule</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Wow!</string>
+			<string>Alle Achtung!</string>
+			<string>Bemerkenswert!</string>
+			<string>Bravo!</string>
+			<string>Stark!</string>
+			<string>Fabulös!</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>Du bist deinem Zeitplan für &quot;%@&quot; weit voraus!</string>
+			<string>Mach so weiter und &quot;%@&quot; ist früher erledigt als geplant!</string>
+		</array>
+	</dict>
+	<key>success</key>
+	<dict>
+		<key>title</key>
+		<array>
+			<string>Läuft bei dir! 🔥</string>
+			<string>Echt stark! 💪</string>
+			<string>Ausgezeichnet! 🏅</string>
+			<string>Klasse Leistung!</string>
+			<string>Fantastisch! ✨</string>
+			<string>Gratulation! 🎈</string>
+			<string>Richtig gut!</string>
+			<string>So macht das Spass! 🎉</string>
+			<string>Nicht schlecht, Herr Specht! 🐥</string>
+			<string>Sensationell! 🎉</string>
+			<string>Weiter so!</string>
+			<string>Super gemacht!</string>
+			<string>Gute Arbeit!</string>
+			<string>Stark! 💪</string>
+			<string>Grossartig!</string>
+			<string>Super Leistung!</string>
+			<string>Zeit zu Feiern! 🥳</string>
+			<string>Volle Punktzahl! 💯</string>
+			<string>Daumen hoch!  👍🏻</string>
+		</array>
+		<key>body</key>
+		<array>
+			<string>&quot;%@&quot; ist erledigt.</string>
+			<string>Du hast &quot;%@&quot; abgehakt.</string>
+			<string>Du hast dein Ziel &quot;%@&quot; erreicht.</string>
+			<string>Du hast &quot;%@&quot; erledigt.</string>
+			<string>&quot;%@&quot; ist abgehakt.</string>
+			<string>&quot;%@&quot; ist geschafft.</string>
+			<string>Du hast &quot;%@&quot; geschafft.</string>
+		</array>
+	</dict>
+</dict>
+</plist>

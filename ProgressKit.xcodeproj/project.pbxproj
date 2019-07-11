@@ -10,6 +10,40 @@
 		797C5EA622D7B4C000FA62FF /* ProgressKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797C5E9C22D7B4BF00FA62FF /* ProgressKit.framework */; };
 		797C5EAB22D7B4C000FA62FF /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EAA22D7B4C000FA62FF /* ProgressKitTests.swift */; };
 		797C5EAD22D7B4C000FA62FF /* ProgressKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 797C5E9F22D7B4BF00FA62FF /* ProgressKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		797C5EDE22D7B61300FA62FF /* PKMessages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 797C5EB722D7B61200FA62FF /* PKMessages.plist */; };
+		797C5EDF22D7B61300FA62FF /* PKNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EB922D7B61200FA62FF /* PKNotifier.swift */; };
+		797C5EE022D7B61300FA62FF /* PKUserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EBB22D7B61200FA62FF /* PKUserNotification.swift */; };
+		797C5EE122D7B61300FA62FF /* PKTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EBC22D7B61200FA62FF /* PKTimeRange.swift */; };
+		797C5EE222D7B61300FA62FF /* PKReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EBD22D7B61200FA62FF /* PKReport.swift */; };
+		797C5EE322D7B61300FA62FF /* PKReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EBE22D7B61200FA62FF /* PKReminderStore.swift */; };
+		797C5EE422D7B61300FA62FF /* PKDisplayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EBF22D7B61200FA62FF /* PKDisplayStyle.swift */; };
+		797C5EE522D7B61300FA62FF /* PKReportStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC022D7B61200FA62FF /* PKReportStore.swift */; };
+		797C5EE622D7B61300FA62FF /* PKStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC122D7B61200FA62FF /* PKStatus.swift */; };
+		797C5EE722D7B61300FA62FF /* PKNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC222D7B61200FA62FF /* PKNotification.swift */; };
+		797C5EE822D7B61300FA62FF /* PKNotification+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC322D7B61200FA62FF /* PKNotification+Token.swift */; };
+		797C5EE922D7B61300FA62FF /* PKLayoutStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC422D7B61200FA62FF /* PKLayoutStyle.swift */; };
+		797C5EEA22D7B61300FA62FF /* PKUserNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC522D7B61200FA62FF /* PKUserNotificationType.swift */; };
+		797C5EEB22D7B61300FA62FF /* PKMessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC622D7B61200FA62FF /* PKMessageStore.swift */; };
+		797C5EEC22D7B61300FA62FF /* Calendar+PKTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC722D7B61200FA62FF /* Calendar+PKTimeRange.swift */; };
+		797C5EED22D7B61300FA62FF /* PKNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EC822D7B61200FA62FF /* PKNotificationHandler.swift */; };
+		797C5EEE22D7B61300FA62FF /* WatermarkAnimatedImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797C5ECA22D7B61200FA62FF /* WatermarkAnimatedImageView.xib */; };
+		797C5EEF22D7B61300FA62FF /* WatermarkAnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ECB22D7B61200FA62FF /* WatermarkAnimatedImageView.swift */; };
+		797C5EF022D7B61300FA62FF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797C5ECC22D7B61200FA62FF /* Media.xcassets */; };
+		797C5EF122D7B61300FA62FF /* UnicodeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ECE22D7B61200FA62FF /* UnicodeLabel.swift */; };
+		797C5EF222D7B61300FA62FF /* UnicodeScalar+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ECF22D7B61200FA62FF /* UnicodeScalar+Emoji.swift */; };
+		797C5EF322D7B61300FA62FF /* ProgressCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797C5ED022D7B61200FA62FF /* ProgressCollectionCell.xib */; };
+		797C5EF422D7B61300FA62FF /* ProgressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED122D7B61200FA62FF /* ProgressCollectionCell.swift */; };
+		797C5EF522D7B61300FA62FF /* ProgressCollectionCell+LayoutStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED222D7B61200FA62FF /* ProgressCollectionCell+LayoutStyle.swift */; };
+		797C5EF622D7B61300FA62FF /* ProgressCollectionBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797C5ED422D7B61200FA62FF /* ProgressCollectionBackgroundView.xib */; };
+		797C5EF722D7B61300FA62FF /* ProgressCollectionBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED522D7B61200FA62FF /* ProgressCollectionBackgroundView.swift */; };
+		797C5EF822D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED722D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift */; };
+		797C5EF922D7B61300FA62FF /* ProgressCollectionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED822D7B61300FA62FF /* ProgressCollectionViewControllerDataSource.swift */; };
+		797C5EFA22D7B61300FA62FF /* ProgressCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED922D7B61300FA62FF /* ProgressCollectionViewController.swift */; };
+		797C5EFB22D7B61300FA62FF /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EDA22D7B61300FA62FF /* Progress.swift */; };
+		797C5EFC22D7B61300FA62FF /* ProgressCollectionSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797C5EDC22D7B61300FA62FF /* ProgressCollectionSectionHeader.xib */; };
+		797C5EFD22D7B61300FA62FF /* ProgressCollectionSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EDD22D7B61300FA62FF /* ProgressCollectionSectionHeader.swift */; };
+		797C5F0322D7B88100FA62FF /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797C5F0222D7B88100FA62FF /* FLAnimatedImage.framework */; };
+		797C5F0522D7B89000FA62FF /* GiphyCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797C5F0422D7B89000FA62FF /* GiphyCoreSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +63,45 @@
 		797C5EA522D7B4BF00FA62FF /* ProgressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		797C5EAA22D7B4C000FA62FF /* ProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressKitTests.swift; sourceTree = "<group>"; };
 		797C5EAC22D7B4C000FA62FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		797C5EB822D7B61200FA62FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/PKMessages.plist; sourceTree = "<group>"; };
+		797C5EB922D7B61200FA62FF /* PKNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKNotifier.swift; sourceTree = "<group>"; };
+		797C5EBA22D7B61200FA62FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/PKMessages.plist; sourceTree = "<group>"; };
+		797C5EBB22D7B61200FA62FF /* PKUserNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKUserNotification.swift; sourceTree = "<group>"; };
+		797C5EBC22D7B61200FA62FF /* PKTimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKTimeRange.swift; sourceTree = "<group>"; };
+		797C5EBD22D7B61200FA62FF /* PKReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKReport.swift; sourceTree = "<group>"; };
+		797C5EBE22D7B61200FA62FF /* PKReminderStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKReminderStore.swift; sourceTree = "<group>"; };
+		797C5EBF22D7B61200FA62FF /* PKDisplayStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKDisplayStyle.swift; sourceTree = "<group>"; };
+		797C5EC022D7B61200FA62FF /* PKReportStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKReportStore.swift; sourceTree = "<group>"; };
+		797C5EC122D7B61200FA62FF /* PKStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKStatus.swift; sourceTree = "<group>"; };
+		797C5EC222D7B61200FA62FF /* PKNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKNotification.swift; sourceTree = "<group>"; };
+		797C5EC322D7B61200FA62FF /* PKNotification+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PKNotification+Token.swift"; sourceTree = "<group>"; };
+		797C5EC422D7B61200FA62FF /* PKLayoutStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKLayoutStyle.swift; sourceTree = "<group>"; };
+		797C5EC522D7B61200FA62FF /* PKUserNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKUserNotificationType.swift; sourceTree = "<group>"; };
+		797C5EC622D7B61200FA62FF /* PKMessageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKMessageStore.swift; sourceTree = "<group>"; };
+		797C5EC722D7B61200FA62FF /* Calendar+PKTimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar+PKTimeRange.swift"; sourceTree = "<group>"; };
+		797C5EC822D7B61200FA62FF /* PKNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKNotificationHandler.swift; sourceTree = "<group>"; };
+		797C5ECA22D7B61200FA62FF /* WatermarkAnimatedImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatermarkAnimatedImageView.xib; sourceTree = "<group>"; };
+		797C5ECB22D7B61200FA62FF /* WatermarkAnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatermarkAnimatedImageView.swift; sourceTree = "<group>"; };
+		797C5ECC22D7B61200FA62FF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		797C5ECE22D7B61200FA62FF /* UnicodeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeLabel.swift; sourceTree = "<group>"; };
+		797C5ECF22D7B61200FA62FF /* UnicodeScalar+Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnicodeScalar+Emoji.swift"; sourceTree = "<group>"; };
+		797C5ED022D7B61200FA62FF /* ProgressCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCollectionCell.xib; sourceTree = "<group>"; };
+		797C5ED122D7B61200FA62FF /* ProgressCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionCell.swift; sourceTree = "<group>"; };
+		797C5ED222D7B61200FA62FF /* ProgressCollectionCell+LayoutStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressCollectionCell+LayoutStyle.swift"; sourceTree = "<group>"; };
+		797C5ED422D7B61200FA62FF /* ProgressCollectionBackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCollectionBackgroundView.xib; sourceTree = "<group>"; };
+		797C5ED522D7B61200FA62FF /* ProgressCollectionBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionBackgroundView.swift; sourceTree = "<group>"; };
+		797C5ED722D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
+		797C5ED822D7B61300FA62FF /* ProgressCollectionViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewControllerDataSource.swift; sourceTree = "<group>"; };
+		797C5ED922D7B61300FA62FF /* ProgressCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewController.swift; sourceTree = "<group>"; };
+		797C5EDA22D7B61300FA62FF /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		797C5EDC22D7B61300FA62FF /* ProgressCollectionSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCollectionSectionHeader.xib; sourceTree = "<group>"; };
+		797C5EDD22D7B61300FA62FF /* ProgressCollectionSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionSectionHeader.swift; sourceTree = "<group>"; };
+		797C5EFE22D7B68000FA62FF /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		797C5EFF22D7B68800FA62FF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		797C5F0022D7B71E00FA62FF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		797C5F0222D7B88100FA62FF /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
+		797C5F0422D7B89000FA62FF /* GiphyCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GiphyCoreSDK.framework; path = Carthage/Build/iOS/Static/GiphyCoreSDK.framework; sourceTree = "<group>"; };
+		797C5F0622D7BB8400FA62FF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797C5F0322D7B88100FA62FF /* FLAnimatedImage.framework in Frameworks */,
+				797C5F0522D7B89000FA62FF /* GiphyCoreSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +128,14 @@
 		797C5E9222D7B4BF00FA62FF = {
 			isa = PBXGroup;
 			children = (
+				797C5F0622D7BB8400FA62FF /* .gitignore */,
+				797C5F0022D7B71E00FA62FF /* README.md */,
+				797C5EFE22D7B68000FA62FF /* Cartfile */,
+				797C5EFF22D7B68800FA62FF /* LICENSE */,
 				797C5E9E22D7B4BF00FA62FF /* ProgressKit */,
 				797C5EA922D7B4C000FA62FF /* ProgressKitTests */,
 				797C5E9D22D7B4BF00FA62FF /* Products */,
+				797C5F0122D7B88100FA62FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +151,14 @@
 		797C5E9E22D7B4BF00FA62FF /* ProgressKit */ = {
 			isa = PBXGroup;
 			children = (
+				797C5ECC22D7B61200FA62FF /* Media.xcassets */,
+				797C5EB622D7B61200FA62FF /* Model */,
+				797C5EDA22D7B61300FA62FF /* Progress.swift */,
+				797C5ED322D7B61200FA62FF /* ProgressCollectionBackgroundView */,
+				797C5ECD22D7B61200FA62FF /* ProgressCollectionCell */,
+				797C5EDB22D7B61300FA62FF /* ProgressCollectionSectionHeader */,
+				797C5ED622D7B61300FA62FF /* ProgressCollectionViewController */,
+				797C5EC922D7B61200FA62FF /* WatermarkAnimatedImageView */,
 				797C5E9F22D7B4BF00FA62FF /* ProgressKit.h */,
 				797C5EA022D7B4BF00FA62FF /* Info.plist */,
 			);
@@ -84,6 +172,87 @@
 				797C5EAC22D7B4C000FA62FF /* Info.plist */,
 			);
 			path = ProgressKitTests;
+			sourceTree = "<group>";
+		};
+		797C5EB622D7B61200FA62FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				797C5EB722D7B61200FA62FF /* PKMessages.plist */,
+				797C5EB922D7B61200FA62FF /* PKNotifier.swift */,
+				797C5EBB22D7B61200FA62FF /* PKUserNotification.swift */,
+				797C5EBC22D7B61200FA62FF /* PKTimeRange.swift */,
+				797C5EBD22D7B61200FA62FF /* PKReport.swift */,
+				797C5EBE22D7B61200FA62FF /* PKReminderStore.swift */,
+				797C5EBF22D7B61200FA62FF /* PKDisplayStyle.swift */,
+				797C5EC022D7B61200FA62FF /* PKReportStore.swift */,
+				797C5EC122D7B61200FA62FF /* PKStatus.swift */,
+				797C5EC222D7B61200FA62FF /* PKNotification.swift */,
+				797C5EC322D7B61200FA62FF /* PKNotification+Token.swift */,
+				797C5EC422D7B61200FA62FF /* PKLayoutStyle.swift */,
+				797C5EC522D7B61200FA62FF /* PKUserNotificationType.swift */,
+				797C5EC622D7B61200FA62FF /* PKMessageStore.swift */,
+				797C5EC722D7B61200FA62FF /* Calendar+PKTimeRange.swift */,
+				797C5EC822D7B61200FA62FF /* PKNotificationHandler.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		797C5EC922D7B61200FA62FF /* WatermarkAnimatedImageView */ = {
+			isa = PBXGroup;
+			children = (
+				797C5ECA22D7B61200FA62FF /* WatermarkAnimatedImageView.xib */,
+				797C5ECB22D7B61200FA62FF /* WatermarkAnimatedImageView.swift */,
+			);
+			path = WatermarkAnimatedImageView;
+			sourceTree = "<group>";
+		};
+		797C5ECD22D7B61200FA62FF /* ProgressCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				797C5ECE22D7B61200FA62FF /* UnicodeLabel.swift */,
+				797C5ECF22D7B61200FA62FF /* UnicodeScalar+Emoji.swift */,
+				797C5ED022D7B61200FA62FF /* ProgressCollectionCell.xib */,
+				797C5ED122D7B61200FA62FF /* ProgressCollectionCell.swift */,
+				797C5ED222D7B61200FA62FF /* ProgressCollectionCell+LayoutStyle.swift */,
+			);
+			path = ProgressCollectionCell;
+			sourceTree = "<group>";
+		};
+		797C5ED322D7B61200FA62FF /* ProgressCollectionBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				797C5ED422D7B61200FA62FF /* ProgressCollectionBackgroundView.xib */,
+				797C5ED522D7B61200FA62FF /* ProgressCollectionBackgroundView.swift */,
+			);
+			path = ProgressCollectionBackgroundView;
+			sourceTree = "<group>";
+		};
+		797C5ED622D7B61300FA62FF /* ProgressCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				797C5ED722D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift */,
+				797C5ED822D7B61300FA62FF /* ProgressCollectionViewControllerDataSource.swift */,
+				797C5ED922D7B61300FA62FF /* ProgressCollectionViewController.swift */,
+			);
+			path = ProgressCollectionViewController;
+			sourceTree = "<group>";
+		};
+		797C5EDB22D7B61300FA62FF /* ProgressCollectionSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				797C5EDC22D7B61300FA62FF /* ProgressCollectionSectionHeader.xib */,
+				797C5EDD22D7B61300FA62FF /* ProgressCollectionSectionHeader.swift */,
+			);
+			path = ProgressCollectionSectionHeader;
+			sourceTree = "<group>";
+		};
+		797C5F0122D7B88100FA62FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				797C5F0422D7B89000FA62FF /* GiphyCoreSDK.framework */,
+				797C5F0222D7B88100FA62FF /* FLAnimatedImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +317,7 @@
 				TargetAttributes = {
 					797C5E9B22D7B4BF00FA62FF = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					797C5EA422D7B4BF00FA62FF = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -160,6 +330,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 797C5E9222D7B4BF00FA62FF;
 			productRefGroup = 797C5E9D22D7B4BF00FA62FF /* Products */;
@@ -177,6 +348,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797C5EF322D7B61300FA62FF /* ProgressCollectionCell.xib in Resources */,
+				797C5EFC22D7B61300FA62FF /* ProgressCollectionSectionHeader.xib in Resources */,
+				797C5EEE22D7B61300FA62FF /* WatermarkAnimatedImageView.xib in Resources */,
+				797C5EF022D7B61300FA62FF /* Media.xcassets in Resources */,
+				797C5EF622D7B61300FA62FF /* ProgressCollectionBackgroundView.xib in Resources */,
+				797C5EDE22D7B61300FA62FF /* PKMessages.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +371,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797C5EF722D7B61300FA62FF /* ProgressCollectionBackgroundView.swift in Sources */,
+				797C5EE622D7B61300FA62FF /* PKStatus.swift in Sources */,
+				797C5EE222D7B61300FA62FF /* PKReport.swift in Sources */,
+				797C5EE322D7B61300FA62FF /* PKReminderStore.swift in Sources */,
+				797C5EF822D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift in Sources */,
+				797C5EE022D7B61300FA62FF /* PKUserNotification.swift in Sources */,
+				797C5EFB22D7B61300FA62FF /* Progress.swift in Sources */,
+				797C5EEF22D7B61300FA62FF /* WatermarkAnimatedImageView.swift in Sources */,
+				797C5EF922D7B61300FA62FF /* ProgressCollectionViewControllerDataSource.swift in Sources */,
+				797C5EDF22D7B61300FA62FF /* PKNotifier.swift in Sources */,
+				797C5EFA22D7B61300FA62FF /* ProgressCollectionViewController.swift in Sources */,
+				797C5EE822D7B61300FA62FF /* PKNotification+Token.swift in Sources */,
+				797C5EEA22D7B61300FA62FF /* PKUserNotificationType.swift in Sources */,
+				797C5EE122D7B61300FA62FF /* PKTimeRange.swift in Sources */,
+				797C5EED22D7B61300FA62FF /* PKNotificationHandler.swift in Sources */,
+				797C5EE522D7B61300FA62FF /* PKReportStore.swift in Sources */,
+				797C5EF422D7B61300FA62FF /* ProgressCollectionCell.swift in Sources */,
+				797C5EF122D7B61300FA62FF /* UnicodeLabel.swift in Sources */,
+				797C5EE422D7B61300FA62FF /* PKDisplayStyle.swift in Sources */,
+				797C5EF522D7B61300FA62FF /* ProgressCollectionCell+LayoutStyle.swift in Sources */,
+				797C5EEB22D7B61300FA62FF /* PKMessageStore.swift in Sources */,
+				797C5EF222D7B61300FA62FF /* UnicodeScalar+Emoji.swift in Sources */,
+				797C5EEC22D7B61300FA62FF /* Calendar+PKTimeRange.swift in Sources */,
+				797C5EE722D7B61300FA62FF /* PKNotification.swift in Sources */,
+				797C5EE922D7B61300FA62FF /* PKLayoutStyle.swift in Sources */,
+				797C5EFD22D7B61300FA62FF /* ProgressCollectionSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +417,18 @@
 			targetProxy = 797C5EA722D7B4C000FA62FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		797C5EB722D7B61200FA62FF /* PKMessages.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				797C5EB822D7B61200FA62FF /* de */,
+				797C5EBA22D7B61200FA62FF /* en */,
+			);
+			name = PKMessages.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		797C5EAE22D7B4C000FA62FF /* Debug */ = {
@@ -341,12 +556,18 @@
 		797C5EB122D7B4C000FA62FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = ProgressKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.progress.ProgressKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,12 +587,18 @@
 		797C5EB222D7B4C000FA62FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = ProgressKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +617,7 @@
 		797C5EB422D7B4C000FA62FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProgressKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +635,7 @@
 		797C5EB522D7B4C000FA62FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProgressKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
