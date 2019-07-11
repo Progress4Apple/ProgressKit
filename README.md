@@ -40,6 +40,10 @@ Don't forget to also add the built libraries in Xcode! See ["Adding frameworks t
 - `FLAnimatedImage.framework`
 - `GiphyCoreSDK.framework`
 
+## Documentation
+
+For detailed instructions on how to use ProgressKit in your app, visit its SDK documentation at [https://sdk.progress.rocks](https://sdk.progress.rocks).
+
 ## Built With
 
 * [Giphy](https://github.com/Giphy/giphy-ios-sdk-core/) - The GIPHY Core SDK is a wrapper around the GIPHY API
