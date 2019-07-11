@@ -384,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\n\njazzy --clean \\\n    --author \"ProgressKit\" \\\n    --author_url https://progress.rocks \\\n    --github_url https://github.com/Progress4Apple/ProgressKit \\\n    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n    --module-version ${VERSION} \\\n    --xcodebuild-arguments -scheme,${TARGET_NAME} \\\n    --module ${TARGET_NAME} \\\n    --root-url https://sdk.progress.rocks/ \\\n    --output docs \\\n    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\n";
+			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\nmv \"${PROJECT_DIR}/docs/CNAME\" \"${PROJECT_DIR}/CNAME\"\njazzy --clean \\\n    --author \"ProgressKit\" \\\n    --author_url https://progress.rocks \\\n    --github_url https://github.com/Progress4Apple/ProgressKit \\\n    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n    --module-version ${VERSION} \\\n    --xcodebuild-arguments -scheme,${TARGET_NAME} \\\n    --module ${TARGET_NAME} \\\n    --root-url https://sdk.progress.rocks/ \\\n    --output docs \\\n    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\nmv \"${PROJECT_DIR}/CNAME\" \"${PROJECT_DIR}/docs/CNAME\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
