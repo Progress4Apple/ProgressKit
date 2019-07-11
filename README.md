@@ -22,7 +22,7 @@ carthage bootstrap --platform iOS
 
 That's it. Happy Hacking!
 
-## Deployment
+## Use in your own app
 
 Simply add ProgressKit as Carthage dependency to use it in your own app. To do so, add the following line to your `Cartfile`:
 
@@ -30,11 +30,11 @@ Simply add ProgressKit as Carthage dependency to use it in your own app. To do s
 github "Progress4Apple/ProgressKit" ~> 1.0
 ```
 
-Don't forget to also add the installed libraries as "Linked Frameworks" in Xcode! See the Carthage documentation for further details:
+Don't forget to also add the installed libraries to `Linked Frameworks` in Xcode! See ["Adding frameworks to an application" in the Carthage documentation for further details](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application):
 
-- ProgressKit.framework
-- FLAnimatedImage.framework
-- GiphyCoreSDK.framework
+- `ProgressKit.framework`
+- `FLAnimatedImage.framework`
+- `GiphyCoreSDK.framework`
 
 ## Built With
 
