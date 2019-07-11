@@ -10,9 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- [Xcode](https://developer.apple.com/xcode/) - includes everything you need to create amazing apps.
-- [Swift 5](https://swift.org/getting-started/) - a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
-- [Carthage](https://github.com/Carthage/Carthage#installing-carthage) - A simple, decentralized dependency manager for Cocoa 
+- [Xcode 10.2+](https://developer.apple.com/xcode/)
+- iOS 12+
+- [Swift 5+](https://swift.org/getting-started/)
+- [Carthage](https://github.com/Carthage/Carthage#installing-carthage) 
 
 ### Installing
 
@@ -32,7 +33,7 @@ Simply add ProgressKit as Carthage dependency to use it in your own app. To do s
 github "Progress4Apple/ProgressKit" ~> 1.0
 ```
 
-Don't forget to also add the built libraries to `Linked Frameworks` in Xcode! See ["Adding frameworks to an application" in the Carthage documentation for further details](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application):
+Don't forget to also add the built libraries in Xcode! See ["Adding frameworks to an application" in the Carthage documentation for further details](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application):
 
 - `ProgressKit.framework`
 - `FLAnimatedImage.framework`
