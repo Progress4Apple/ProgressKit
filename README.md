@@ -2,7 +2,7 @@
 
 Swift SDK to visualize your progress based on Apple Reminders.
 
-![ProgressKit Preview](ProgressKit.jpg)
+![ProgressKit Preview](https://github.com/Progress4Apple/ProgressKit/tree/master/ProgressKit.jpg)
 
 ## Getting Started
 
