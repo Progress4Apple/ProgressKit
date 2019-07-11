@@ -277,6 +277,7 @@
 				797C5E9822D7B4BF00FA62FF /* Sources */,
 				797C5E9922D7B4BF00FA62FF /* Frameworks */,
 				797C5E9A22D7B4BF00FA62FF /* Resources */,
+				797C5F0B22D7C7C200FA62FF /* Jazzy - Generate Documentation */,
 			);
 			buildRules = (
 			);
@@ -365,6 +366,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		797C5F0B22D7C7C200FA62FF /* Jazzy - Generate Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Jazzy - Generate Documentation";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\n\njazzy --clean \\\n    --author \"ProgressKit\" \\\n    --author_url https://progress.rocks \\\n    --github_url https://github.com/Progress4Apple/ProgressKit \\\n    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n    --module-version ${VERSION} \\\n    --xcodebuild-arguments -scheme,${TARGET_NAME} \\\n    --module ${TARGET_NAME} \\\n    --root-url https://sdk.progress.rocks/ \\\n    --output docs \\\n    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		797C5E9822D7B4BF00FA62FF /* Sources */ = {

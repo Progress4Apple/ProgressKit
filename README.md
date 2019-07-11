@@ -14,6 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 - iOS 12+
 - [Swift 5+](https://swift.org/getting-started/)
 - [Carthage](https://github.com/Carthage/Carthage#installing-carthage) 
+- [Jazzy](https://github.com/realm/jazzy)
 
 ### Installing
 
@@ -43,6 +44,7 @@ Don't forget to also add the built libraries in Xcode! See ["Adding frameworks t
 
 * [Giphy](https://github.com/Giphy/giphy-ios-sdk-core/) - The GIPHY Core SDK is a wrapper around the GIPHY API
 * [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) - Performant animated GIF engine for iOS
+* [Jazzy](https://github.com/realm/jazzy)
 
 ## Contributing
 
