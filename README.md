@@ -2,6 +2,8 @@
 
 Swift SDK to visualize your progress based on Apple Reminders.
 
+![ProgressKit Preview](ProgressKit.jpg)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -30,7 +32,7 @@ Simply add ProgressKit as Carthage dependency to use it in your own app. To do s
 github "Progress4Apple/ProgressKit" ~> 1.0
 ```
 
-Don't forget to also add the installed libraries to `Linked Frameworks` in Xcode! See ["Adding frameworks to an application" in the Carthage documentation for further details](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application):
+Don't forget to also add the built libraries to `Linked Frameworks` in Xcode! See ["Adding frameworks to an application" in the Carthage documentation for further details](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application):
 
 - `ProgressKit.framework`
 - `FLAnimatedImage.framework`
