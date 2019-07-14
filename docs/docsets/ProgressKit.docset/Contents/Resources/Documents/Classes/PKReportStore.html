@@ -30,13 +30,18 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../getting-started.html">Getting Started</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/PKMessageStore.html">PKMessageStore</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/PKMessageStore/Key.html">– Key</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/PKNotifier.html">PKNotifier</a>
@@ -129,7 +134,8 @@
         <section>
           <section class="section">
             <h1>PKReportStore</h1>
-            
+            <p>Convenience interface which provides CRUD operations for <code>PKReports</code>.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -147,7 +153,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Shared instance of <code>PKReportStore</code>. You&rsquo;ll most probably want to use this one in your code.</p>
+
                       </div>
                     </section>
                   </div>
@@ -165,22 +172,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Initializes the <code>PKReportStore</code> using a given suiteName.</p>
+
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Last%20Modified"></a>
-                <a name="//apple_ref/swift/Section/Last Modified" class="dashAnchor"></a>
-                <a href="#/Last%20Modified">
-                  <h3 class="section-name">Last Modified</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -194,22 +191,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Timestamp when the <code>PKReportStore</code> was last modified.</p>
+
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/SAVE"></a>
-                <a name="//apple_ref/swift/Section/SAVE" class="dashAnchor"></a>
-                <a href="#/SAVE">
-                  <h3 class="section-name">SAVE</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -223,7 +210,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Saves a given report to persistent storage.</p>
+
                       </div>
                     </section>
                   </div>
@@ -241,22 +229,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Saves all given reports to persistent storage.</p>
+
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/DELETE"></a>
-                <a name="//apple_ref/swift/Section/DELETE" class="dashAnchor"></a>
-                <a href="#/DELETE">
-                  <h3 class="section-name">DELETE</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -270,22 +248,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Deletes the given report from the persistent storage.</p>
+
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/READ"></a>
-                <a name="//apple_ref/swift/Section/READ" class="dashAnchor"></a>
-                <a href="#/READ">
-                  <h3 class="section-name">READ</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -299,7 +267,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Loads all reports from persistent storage.</p>
+
                       </div>
                     </section>
                   </div>
@@ -317,7 +286,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Loads all reports with a given display style from persistent storage.</p>
+
                       </div>
                     </section>
                   </div>
@@ -335,7 +305,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Loads all reports groupbed by display style and filtered by callback function.</p>
+
                       </div>
                     </section>
                   </div>
@@ -345,7 +316,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-11)</p>
+          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

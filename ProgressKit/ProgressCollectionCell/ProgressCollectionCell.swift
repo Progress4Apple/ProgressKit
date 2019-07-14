@@ -25,6 +25,9 @@
 
 import UIKit
 
+/**
+ A `UICollectionViewCell` which is capable of drawing a progress bar based upon `PKStatus` and `PKReport`.
+ */
 @IBDesignable public class ProgressCollectionCell: UICollectionViewCell {
     @IBOutlet public weak var stackView: UIStackView!
     @IBOutlet public weak var leadingTitleLabel: UILabel!

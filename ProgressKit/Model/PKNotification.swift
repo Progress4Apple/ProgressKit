@@ -25,7 +25,10 @@
 
 import Foundation
 
+/// `ProgressKit` notifications.
 public enum PKNotification: String {
+    /// Subscribe to if you want to be notified when the `PKReportStore` has changed.
     case reportStoreDidChange = "PKReportStoreDidChange"
+    /// Subscribe to if you want to be notified when the `PKReminderStore` has changed.
     case reminderStoreDidChange = "PKReminderStoreDidChange"
 }

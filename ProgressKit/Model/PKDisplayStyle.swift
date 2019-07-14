@@ -25,10 +25,14 @@
 
 import Foundation
 
+/// Style in which to render the progress bar.
 public enum PKDisplayStyle: String, Codable {
+    /// Show the achieved progress.
     case progress
+    /// Show the remaining work.
     case remaining
     
+    /// Iterable containing all available display styles.
     public static let availableDisplayStyles: [PKDisplayStyle] = [
         .progress,
         .remaining

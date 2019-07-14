@@ -25,14 +25,22 @@
 
 import Foundation
 
+/// Codable time range which is capable of determining lower and upper bounds (start and end dates) of its items.
 public enum PKTimeRange: String, Codable {
+    /// Time range reflecting the current week.
     case currentWeek
+    /// Time range reflecting last week.
     case lastWeek
+    /// Time range reflecting the current month.
     case currentMonth
+    /// Time range reflecting last month.
     case lastMonth
+    /// Time range reflecting the current year.
     case currentYear
+    /// Time range reflecting last year.
     case lastYear
     
+    /// Iterable object providing all available time ranges.
     public static let availableTimeRanges: [PKTimeRange] = [
         .currentWeek,
         .lastWeek,
@@ -42,6 +50,7 @@ public enum PKTimeRange: String, Codable {
         .lastYear
     ]
     
+    /// Effective start date in a given calendar of the chosen item.
     public func lowerBound(in calendar: Calendar) -> Date {
         let now = Date()
         
@@ -72,7 +81,7 @@ public enum PKTimeRange: String, Codable {
         }
     }
     
-    
+    /// Effective end date in a given calendar of the chosen item.
     public func upperBound(in calendar: Calendar) -> Date {
         let lowerBound = self.lowerBound(in: calendar)
         

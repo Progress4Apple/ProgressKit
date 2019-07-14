@@ -27,13 +27,32 @@ import Foundation
 import UserNotifications
 import GiphyCoreSDK
 
+/**
+ `Progress` is a convenient interface for reminders & reports and it's the primary means of interacting with them.
+*/
 public class Progress {
     
+    /// The shared report manager which provides access to report CRUD operations.
     public static private (set) var reportStore = PKReportStore.standard
+    
+    /// The shared reminder manager which provides access to Apple Reminders.
     public static private (set) var reminderStore = PKReminderStore.standard
+    
+    /// The shared notifier manager which handles user notification handling.
     public static private (set) var notifier = PKNotifier.standard
     
-    public static func configure(suiteName: String? = nil, userNotificationCenter: UNUserNotificationCenter? = nil, giphyApiKey: String = "") {
+    /**
+     Configuration method which initializes the ProgressKit framework for usage in your own app.
+     
+     - parameter suiteName: A string that names the group whose shared directory you want to obtain. This input should exactly match one of the strings in the app's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups).
+     - parameter userNotificationCenter: The central object for managing notification-related activities for your app or app extension. Usually you just want to use `UNUserNotificationCenter.current()`.
+     - parameter giphyApiKey: A string containing the Giphy Api Key to use. See [Request A GIPHY API Key](https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key) to obtain one.
+    */
+    public static func configure(
+        suiteName: String? = nil,
+        userNotificationCenter: UNUserNotificationCenter? = nil,
+        giphyApiKey: String = ""
+    ) {
         Progress.reportStore = PKReportStore(suiteName: suiteName)
         Progress.notifier = PKNotifier(suiteName: suiteName, userNotificationCenter: userNotificationCenter)
         GiphyCore.configure(apiKey: giphyApiKey)

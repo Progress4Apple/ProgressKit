@@ -25,8 +25,13 @@
 
 import UIKit
 
+/// Defines how the reports should be laid out.
 public enum PKLayoutStyle {
+    
+    /// Layout reports as regular table view. Used on small screens.
     case table
+    
+    /// Layout reports as grid view. Used on medium to big screens.
     case grid
     
     public func itemSize(in collectionView: UICollectionView) -> CGSize {

@@ -25,6 +25,9 @@
 
 import EventKit
 
+/**
+ Delegate protocol for `ProgressCollectionViewController` to allow for event customization based upon user interaction.
+ */
 public protocol ProgressCollectionViewControllerDelegate {
     func progressCollection(_ viewController: ProgressCollectionViewController, handleError error: Error)
     func progressCollection(_ viewController: ProgressCollectionViewController, handleAuthorizationStatusNotSufficient status: EKAuthorizationStatus)

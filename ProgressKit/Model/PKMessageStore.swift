@@ -25,9 +25,15 @@
 
 import Foundation
 
+/**
+ Provider for predefined text messages based upon the current progress of a user (`PKUserNotificationType`).
+ */
 public class PKMessageStore {
+    
+    /// Shared instance of the `PKMessageStore`. You'll most probably want to use this instead of your own one.
     public static let standard = PKMessageStore(Bundle(for: PKMessageStore.self), pathForResource: "PKMessages", ofType: "plist")
     
+    /// :nodoc:
     public enum Key: String {
         case title = "title"
         case body = "body"

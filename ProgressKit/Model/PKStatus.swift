@@ -25,40 +25,62 @@
 
 import Foundation
 
+/**
+ Provides an evaluated progress status of a given report.
+ */
 public struct PKStatus {
+    /// Unique identifier of a `PKReport.identifier`
     public let reportIdentifier: String
     
+    /// Constructor to build a new `PKStatus`.
     init(for report: PKReport){
         reportIdentifier = report.identifier
     }
     
+    /// Title of `PKStatus`
     public var title: String = ""
+    
+    /// Tint color of `PKStatus` if any. This reflects the color of a given Apple Reminder list if any.
     public var tintColor: CGColor? = nil
+    
+    /// The user defined goal to achieve.
     public var goal: Int = 1
+    
+    /// Reflects how many points the user already achieved.
     public var completed: Int = 0
     
+    /// The start date of the user defined `PKReport.timeRange`
     public var timeRangeLowerBound: Date? = nil
+    
+    /// The end date of the user defined `PKReport.timeRange`
     public var timeRangeUpperBound: Date? = nil
     
+    /// The progress as percentage.
     public var completedPercentage: Double {
         guard goal > 0 else { return 1.0 }
         return Double(completed) / Double(goal)
     }
     
+    /// The remaining percentage.
     public var remainingPercentage: Double {
         return 1.0 - completedPercentage
     }
     
+    /// The remaining points as fixed value.
     public var remaining: Int {
         return goal - completed
     }
     
+    /// Flag whether the user already achieved their goal.
     public var isDone: Bool {
         return completedPercentage >= 1.0
     }
 }
 
+
 extension PKStatus: Equatable {
+    
+    /// Makes `PKStatus` conform to the [`Equatable` protocol](https://developer.apple.com/documentation/swift/equatable).
     static public func == (lhs: PKStatus, rhs: PKStatus) -> Bool {
         return lhs.reportIdentifier == rhs.reportIdentifier &&
             lhs.title == rhs.title &&

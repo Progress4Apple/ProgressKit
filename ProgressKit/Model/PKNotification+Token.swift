@@ -27,6 +27,7 @@ import Foundation
 
 extension PKNotification {
     
+    /// Helper class for observing notifications. Allows for deregistration upon deallocation.
     public final class Token: NSObject {
         weak var notificationCenter: NotificationCenter?
         weak var rawToken: NSObjectProtocol?

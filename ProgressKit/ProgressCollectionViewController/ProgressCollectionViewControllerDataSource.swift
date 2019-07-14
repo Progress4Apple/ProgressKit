@@ -25,7 +25,9 @@
 
 import UIKit
 
-
+/**
+ DataSource protocol for `ProgressCollectionViewController` which is capable of loading, reloading and saving `PKReport` objects.
+ */
 public protocol ProgressCollectionViewControllerDataSource {
     func progressCollection(_ viewController: ProgressCollectionViewController, loadReports completionHandler: ([[PKReport]]?, Error?) -> Void)
     func progressCollection(_ viewController: ProgressCollectionViewController, shouldReload completionHandler: ((Bool) -> Void))

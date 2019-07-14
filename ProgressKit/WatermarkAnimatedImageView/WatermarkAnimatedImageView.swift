@@ -26,6 +26,7 @@
 import UIKit
 import FLAnimatedImage
 
+/// Used by the notification extension to render the watermark above a GIPHY image.
 public class WatermarkAnimatedImageView: FLAnimatedImageView {
     @IBOutlet public weak var watermarkImageView: UIImageView!
     

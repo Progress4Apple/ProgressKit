@@ -27,6 +27,9 @@ import UIKit
 import EventKit
 import NotificationCenter
 
+/**
+ The heart of progress rendering is a `UICollectionViewController` which reads, evaluates and renders the `PKReports` from the configured `ProgressCollectionViewControllerDataSource`.
+ */
 open class ProgressCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSourcePrefetching {
     
     private (set) public var allReports: [[PKReport]] = []

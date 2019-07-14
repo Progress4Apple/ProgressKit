@@ -25,7 +25,12 @@
 
 import EventKit
 
+/**
+ Convenience interface for interacting with [Apples EventKit framework](https://developer.apple.com/documentation/eventkit).
+ */
 public class PKReminderStore: PKNotificationHandler {
+    
+    /// Shared instance of `PKReminderStore`. You'll most probably want to use this instead of creating your own instance.
     public static let standard = PKReminderStore(eventStore: EKEventStore())
     
     private let eventStore: EKEventStore
@@ -42,6 +47,7 @@ public class PKReminderStore: PKNotificationHandler {
         post(notification: .reminderStoreDidChange)
     }
     
+    /// Retrieves all Apple Reminder Lists as [`EKCalendar` objects](https://developer.apple.com/documentation/eventkit/ekcalendar).
     public func allLists(completionHandler: @escaping (([EKCalendar]?, Error?) -> Void )) {
         verifyAuthorization(to: eventStore) { [weak self] status, error in
             guard status == .authorized, let strongSelf = self else {
@@ -52,6 +58,7 @@ public class PKReminderStore: PKNotificationHandler {
         }
     }
     
+    /// Verifies user authorization for access to the [`EKEventStore`](https://developer.apple.com/documentation/eventkit/ekeventstore).
     public func verifyAuthorization(completionHandler: @escaping ((EKAuthorizationStatus?, Error?) -> Void)) {
         verifyAuthorization(to: eventStore, completionHandler: completionHandler)
     }
@@ -77,7 +84,7 @@ public class PKReminderStore: PKNotificationHandler {
         }
     }
     
-    
+    /// Fetches the progress status for a given `PKReport` using a provided [`Calendar`](https://developer.apple.com/documentation/foundation/calendar).
     public func fetchStatus(for report: PKReport, in calendar: Calendar, completionHandler: @escaping ((PKStatus?, Error?)->Void)) {
         allLists { [weak self] allLists, error in
             guard error == nil, let strongSelf = self else {

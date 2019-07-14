@@ -57,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		795BA2A622DB60560099FE1D /* Getting Started.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Getting Started.md"; sourceTree = "<group>"; };
 		797C5E9C22D7B4BF00FA62FF /* ProgressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		797C5E9F22D7B4BF00FA62FF /* ProgressKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressKit.h; sourceTree = "<group>"; };
 		797C5EA022D7B4BF00FA62FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795BA2A522DB60560099FE1D /* Guides */ = {
+			isa = PBXGroup;
+			children = (
+				795BA2A622DB60560099FE1D /* Getting Started.md */,
+			);
+			path = Guides;
+			sourceTree = "<group>";
+		};
 		797C5E9222D7B4BF00FA62FF = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +141,7 @@
 				797C5F0022D7B71E00FA62FF /* README.md */,
 				797C5EFE22D7B68000FA62FF /* Cartfile */,
 				797C5EFF22D7B68800FA62FF /* LICENSE */,
+				795BA2A522DB60560099FE1D /* Guides */,
 				797C5E9E22D7B4BF00FA62FF /* ProgressKit */,
 				797C5EA922D7B4C000FA62FF /* ProgressKitTests */,
 				797C5E9D22D7B4BF00FA62FF /* Products */,
@@ -384,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\nmv \"${PROJECT_DIR}/docs/CNAME\" \"${PROJECT_DIR}/CNAME\"\njazzy --clean \\\n    --author \"ProgressKit\" \\\n    --author_url https://progress.rocks \\\n    --github_url https://github.com/Progress4Apple/ProgressKit \\\n    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n    --module-version ${VERSION} \\\n    --xcodebuild-arguments -scheme,${TARGET_NAME} \\\n    --module ${TARGET_NAME} \\\n    --root-url https://sdk.progress.rocks/ \\\n    --output docs \\\n    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\nmv \"${PROJECT_DIR}/CNAME\" \"${PROJECT_DIR}/docs/CNAME\"\n";
+			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\nmv \"${PROJECT_DIR}/docs/CNAME\" \"${PROJECT_DIR}/CNAME\"\njazzy --clean \\\n    --documentation=Guides/*.md \\\n    --author \"ProgressKit\" \\\n    --author_url https://progress.rocks \\\n    --github_url https://github.com/Progress4Apple/ProgressKit \\\n    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n    --module-version ${VERSION} \\\n    --xcodebuild-arguments -scheme,${TARGET_NAME} \\\n    --module ${TARGET_NAME} \\\n    --root-url https://sdk.progress.rocks/ \\\n    --output docs \\\n    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\nmv \"${PROJECT_DIR}/CNAME\" \"${PROJECT_DIR}/docs/CNAME\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

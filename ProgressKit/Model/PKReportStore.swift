@@ -25,12 +25,20 @@
 
 import Foundation
 
+/**
+ Convenience interface which provides CRUD operations for `PKReports`.
+ */
 public class PKReportStore: PKNotificationHandler {
     
+    /// Shared instance of `PKReportStore`. You'll most probably want to use this one in your code.
     public static let standard = PKReportStore()
     
     let baseURL: URL?
     
+    /**
+     Initializes the `PKReportStore` using a given suiteName.
+     - parameter suiteName: A string that names the group whose shared directory you want to obtain. This input should exactly match one of the strings in the app's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups).
+     */
     public init(suiteName: String? = nil){
         if let suiteName = suiteName {
             self.baseURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: suiteName)
@@ -43,15 +51,13 @@ public class PKReportStore: PKNotificationHandler {
         case reports = "Reports"
     }
     
-    // MARK: Last Modified
-    
+    /// Timestamp when the `PKReportStore` was last modified.
     public func lastModified() throws -> Date? {
         return try lastModified(fileNamed: .reports)
     }
     
     
-    // MARK: SAVE
-    
+    /// Saves a given report to persistent storage.
     public func save(report saveItem: PKReport) throws {
         var allItems = try loadReports()
         var needsInsert = true
@@ -69,14 +75,14 @@ public class PKReportStore: PKNotificationHandler {
         
         try write(fileNamed: .reports, with: allItems)
     }
-    
+
+    /// Saves all given reports to persistent storage.
     public func save(all reports: [PKReport]) throws {
         try write(fileNamed: .reports, with: reports)
     }
     
     
-    // MARK: DELETE
-    
+    /// Deletes the given report from the persistent storage.
     public func delete(report deleteItem: PKReport) throws {
         var allItems = try loadReports()
         
@@ -90,18 +96,17 @@ public class PKReportStore: PKNotificationHandler {
     }
     
     
-    // MARK: READ
-    
+    /// Loads all reports from persistent storage.
     public func loadReports() throws -> [PKReport] {
         return try read(fileNamed: .reports)
     }
     
-    
+    /// Loads all reports with a given display style from persistent storage.
     public func loadReports(withDisplayStyle displayStyle: PKDisplayStyle) throws -> [PKReport] {
         return try loadReports().filter{ $0.displayStyle == displayStyle }
     }
     
-    
+    /// Loads all reports groupbed by display style and filtered by callback function.
     public func loadReports(groupedByTimeRangWithDisplayStyle displayStyle: PKDisplayStyle, filteredBy isIncluded: (((PKReport)) -> Bool) = { _ in return true }) throws -> [[PKReport]] {
         var noTimeRange = [PKReport]()
         var timeRangeGrouped: [PKTimeRange: [PKReport]] = [:]

@@ -25,6 +25,9 @@
 
 import UIKit
 
+/**
+ A `UICollectionReusableView` used as section header which displays the human readable format of `PKTimeRange` if needed.
+ */
 public class ProgressCollectionSectionHeader: UICollectionReusableView {
     @IBOutlet weak var leadingTitleLabel: UILabel!
     @IBOutlet weak var trailingTitleLabel: UILabel!

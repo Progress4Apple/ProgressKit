@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Enumerations  Reference</title>
+    <title>Getting Started  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,7 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Enumerations" class="dashAnchor"></a>
-    <a title="Enumerations  Reference"></a>
+    <a title="Getting Started  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">ProgressKit 1.0 Docs</a> (0% documented)</p>
@@ -23,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="index.html">ProgressKit Reference</a>
         <img id="carat" src="img/carat.png" />
-        Enumerations  Reference
+        Getting Started  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -133,107 +132,58 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Enumerations</h1>
-            <p>The following enumerations are available globally.</p>
+            
+            <h1 id='getting-started' class='heading'>Getting Started</h1>
 
-          </section>
-          <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Enum/PKDisplayStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/">PKDisplayStyle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Style in which to render the progress bar.</p>
+<p>These instructions will get you a up and running to use <code>ProgressKit</code> in your own app.</p>
+<h2 id='prerequisites' class='heading'>Prerequisites</h2>
 
-                        <a href="Enums/PKDisplayStyle.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Enum/PKLayoutStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/">PKLayoutStyle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Defines how the reports should be laid out.</p>
+<p>Make sure you have the following installed on your system to kick things off:</p>
 
-                        <a href="Enums/PKLayoutStyle.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Enum/PKNotification" class="dashAnchor"></a>
-                    <a class="token" href="#/">PKNotification</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>ProgressKit</code> notifications.</p>
+<ul>
+<li><a href="https://developer.apple.com/xcode/">Xcode 10.2+</a></li>
+<li>iOS 12+</li>
+<li><a href="https://swift.org/getting-started/">Swift 5+</a></li>
+<li><a href="https://github.com/Carthage/Carthage#installing-carthage">Carthage</a></li>
+<li><a href="https://github.com/realm/jazzy">Jazzy</a></li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
 
-                        <a href="Enums/PKNotification.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Enum/PKTimeRange" class="dashAnchor"></a>
-                    <a class="token" href="#/">PKTimeRange</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Codable time range which is capable of determining lower and upper bounds (start and end dates) of its items.</p>
+<p>To add <code>ProgressKit</code> as Carthage dependency insert the following line to your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "Progress4Apple/ProgressKit" ~&gt; 1.0
+</code></pre>
 
-                        <a href="Enums/PKTimeRange.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
+<p>Let <code>Carthage</code> download and compile the library by executing the following command:</p>
+<pre class="highlight plaintext"><code>carthage bootstrap --platform iOS
+</code></pre>
+
+<p>As last step add the built libraries in Xcode. See <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application"><q>Adding frameworks to an application</q> in the Carthage documentation for further details</a>:</p>
+
+<ul>
+<li><code>ProgressKit.framework</code></li>
+<li><code>FLAnimatedImage.framework</code></li>
+<li><code>GiphyCoreSDK.framework</code></li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Import <code>ProgressKit</code> and call <code><a href="Classes/Progress.html#/configure(suiteName:userNotificationCenter:giphyApiKey:)">Progress.configure(...)</a></code> in <code>application(_:didFinishLaunchingWithOptions:)</code> of your AppDelegate.swift for initialization:</p>
+<pre class="highlight plaintext"><code>import UserNotifications
+import ProgressKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+func application(_ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+) -&gt; Bool {
+
+    Progress.configure(
+        suiteName: "group.suite-name",
+        userNotificationCenter: UNUserNotificationCenter.current(),
+        giphyApiKey: "your-giphy-api-key"
+    )
+</code></pre>
+
           </section>
         </section>
         <section id="footer">

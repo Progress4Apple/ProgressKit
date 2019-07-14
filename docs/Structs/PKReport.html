@@ -30,13 +30,18 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../getting-started.html">Getting Started</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/PKMessageStore.html">PKMessageStore</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/PKMessageStore/Key.html">– Key</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/PKNotifier.html">PKNotifier</a>
@@ -129,7 +134,9 @@
         <section>
           <section class="section">
             <h1>PKReport</h1>
-            
+            <p>A user defined report which is the heart of any progress calculation.
+A <code>PKReport</code> declares which goal the user want to achieve within a <code><a href="../Enums/PKTimeRange.html">PKTimeRange</a></code>.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -147,7 +154,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Unique identifier of <code>PKReport</code>.</p>
+
                       </div>
                     </section>
                   </div>
@@ -165,7 +173,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Defines how the <code>PKReport</code> should be rendered. Either a bar which shows the current progres, or a bar which shows the remaining amount of work.</p>
+
                       </div>
                     </section>
                   </div>
@@ -183,7 +192,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Unique identifier of an Apple Reminder list. See <a href="https://developer.apple.com/documentation/eventkit/ekcalendar/1507380-calendaridentifier"><code>EKCalendar.calendarIdentifier</code></a>.</p>
+
                       </div>
                     </section>
                   </div>
@@ -201,7 +211,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A search term which should be used to match Apple Reminders against this <code>PKReport</code>. IMPORTANT: The text needs to be part of the reminders title.</p>
+
                       </div>
                     </section>
                   </div>
@@ -219,7 +230,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Whether or not to calculate the progress of this <code>PKReport</code> based upon Apple Reminder priorities.</p>
+
                       </div>
                     </section>
                   </div>
@@ -237,7 +249,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The time range in which the desired goal should be achieved. If <code>nil</code> the <code>overall</code> time range is used.</p>
+
                       </div>
                     </section>
                   </div>
@@ -255,7 +268,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Deadline of this report if any.</p>
+
                       </div>
                     </section>
                   </div>
@@ -273,7 +287,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The desired goal, the user wants to achieve. If <code>nil</code> the desired goal is to complete all matched Apple Reminders.</p>
+
                       </div>
                     </section>
                   </div>
@@ -291,7 +306,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>If this <code>PKReport</code> should be rendered in the Today Screen Widget.</p>
+
                       </div>
                     </section>
                   </div>
@@ -309,7 +325,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Whether or not the user wants to receive notifications regarding this report.</p>
+
                       </div>
                     </section>
                   </div>
@@ -327,7 +344,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Convenience constructor which initializes all properties.</p>
+
                       </div>
                     </section>
                   </div>
@@ -349,7 +367,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Makes <code>PKReport</code> conforming to the <a href="https://developer.apple.com/documentation/swift/hashable"><code>Hashable</code> protocol</a>.</p>
+
                       </div>
                     </section>
                   </div>
@@ -359,7 +378,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-11)</p>
+          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

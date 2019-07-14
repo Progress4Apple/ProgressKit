@@ -25,6 +25,7 @@
 
 import Foundation
 
+/// Generic protocol which adds basic NotificationHandler capabilities to its conforming objects.
 public protocol PKNotificationHandler {}
 
 extension PKNotificationHandler {
@@ -33,6 +34,7 @@ extension PKNotificationHandler {
         NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: notification.rawValue)))
     }
     
+    /// Adds an observer for all given `PKNotification`s and returns a `PKNotification.Token`.
     public func addObserver(for notifications: [PKNotification], queue: OperationQueue? = nil, using block: @escaping (Notification) -> Void) -> [PKNotification.Token] {
         
         return notifications.map{ notification in
@@ -40,6 +42,7 @@ extension PKNotificationHandler {
         }
     }
     
+    /// Add an observer for a given `PKNotification` and return a `PKNotification.Token`.
     public func addObserver(for notification: PKNotification, queue: OperationQueue? = nil, using block: @escaping (Notification) -> Void) -> PKNotification.Token {
         
         let notificationCenter = NotificationCenter.default
@@ -48,6 +51,7 @@ extension PKNotificationHandler {
         return PKNotification.Token(notificationCenter: notificationCenter, token: rawToken)
     }
     
+    /// Remove an observer by its `PKNotification.Token`.
     public func removeObserver(token: PKNotification.Token) {
         guard let rawToken = token.rawToken else { return }
         token.notificationCenter?.removeObserver(rawToken)

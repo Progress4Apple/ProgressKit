@@ -25,12 +25,22 @@
 
 import Foundation
 
+/// Type of notification the user should receive. The tone reflects their current progress towards the predefined reports.
 enum PKUserNotificationType: String, Codable {
+    
+    /// The user is behind schedule and should speed up to achieve their defined goal.
     case behindSchedule = "behindSchedule"
+    
+    /// The user is on schedule and should keep on to achieve their defined goal.
     case onSchedule = "onSchedule"
+    
+    /// The user is before schedule and should achieve their defined goal easily.
     case beforeSchedule = "beforeSchedule"
+    
+    /// The user achieved their defined goal.
     case success = "success"
     
+    /// Retrieves predefined keywords depending on the chosen `PKUserNotificationType`.
     static func availableTerms(for notificationType: PKUserNotificationType) -> [String] {
         switch notificationType {
         case .behindSchedule:

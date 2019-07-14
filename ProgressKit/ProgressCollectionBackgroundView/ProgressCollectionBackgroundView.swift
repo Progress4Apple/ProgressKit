@@ -25,6 +25,9 @@
 
 import UIKit
 
+/**
+ `UIAppearance` aware background view for the `ProgressCollectionViewController`.
+ */
 public class ProgressCollectionBackgroundView: UIView {
     @IBOutlet public weak var imageView: UIImageView!
     @IBOutlet public weak var titleLabel: UILabel!

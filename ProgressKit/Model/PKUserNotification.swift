@@ -25,6 +25,7 @@
 
 import Foundation
 
+/// Codable user notification to keep track of sent notifications to avoid sending the same message multiple times.
 struct PKUserNotification: Codable {
     let identifier: String = UUID().uuidString.replacingOccurrences(of: "-", with: "")
     let reportIdentifier: String

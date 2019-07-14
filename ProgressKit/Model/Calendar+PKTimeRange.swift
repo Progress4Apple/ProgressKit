@@ -27,6 +27,7 @@ import Foundation
 
 extension Calendar {
     
+    /// Translates a given `PKTimeRange` in a human readable format.
     public func string(from timeRange: PKTimeRange) -> String?{
         let formatter = DateFormatter()
         let now = Date()

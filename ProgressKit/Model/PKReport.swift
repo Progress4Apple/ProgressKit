@@ -26,19 +26,43 @@
 import Foundation
 import EventKit
 
+/**
+ A user defined report which is the heart of any progress calculation.
+ A `PKReport` declares which goal the user want to achieve within a `PKTimeRange`.
+ */
 public struct PKReport: Codable {
+    
+    /// Unique identifier of `PKReport`.
     public let identifier: String
     
+    /// Defines how the `PKReport` should be rendered. Either a bar which shows the current progres, or a bar which shows the remaining amount of work.
     public let displayStyle: PKDisplayStyle
+    
+    /// Unique identifier of an Apple Reminder list. See [`EKCalendar.calendarIdentifier`](https://developer.apple.com/documentation/eventkit/ekcalendar/1507380-calendaridentifier).
     public let listIdentifier: String?
+    
+    /// A search term which should be used to match Apple Reminders against this `PKReport`. IMPORTANT: The text needs to be part of the reminders title.
     public let searchTerm: String?
+    
+    /// Whether or not to calculate the progress of this `PKReport` based upon Apple Reminder priorities.
     public let isPriorityBased: Bool
+    
+    /// The time range in which the desired goal should be achieved. If `nil` the `overall` time range is used.
     public let timeRange: PKTimeRange?
+    
+    /// Deadline of this report if any.
     public let deadline: Date?
+    
+    /// The desired goal, the user wants to achieve. If `nil` the desired goal is to complete all matched Apple Reminders.
     public let goal: Int?
+    
+    /// If this `PKReport` should be rendered in the Today Screen Widget.
     public let showInTodayScreen: Bool
+    
+    /// Whether or not the user wants to receive notifications regarding this report.
     public let notificationsEnabled: Bool?
     
+    /// Convenience constructor which initializes all properties.
     public init(
         identifier: String,
         displayStyle: PKDisplayStyle,
@@ -63,6 +87,7 @@ public struct PKReport: Codable {
         self.notificationsEnabled   = notificationsEnabled
     }
     
+    /// Calculates the score for a given `EKReminder` based upon the `isPriortiyBased` flag.
     func score(for reminder: EKReminder) -> Int {
         if isPriorityBased {
             switch reminder.priority {
@@ -79,6 +104,7 @@ public struct PKReport: Codable {
 
 extension PKReport: Hashable {
     
+    /// Makes `PKReport` conforming to the [`Hashable` protocol](https://developer.apple.com/documentation/swift/hashable).
     public func hash(into hasher: inout Hasher) {
         hasher.combine(identifier)
     }

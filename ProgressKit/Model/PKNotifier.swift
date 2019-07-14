@@ -27,9 +27,20 @@ import Foundation
 import UserNotifications
 import GiphyCoreSDK
 
+
+/**
+ `PKNotifier` provides a user notification interface and is capable to decide whether or not `ProgressKit` should inform the user about its progress.
+*/
 public class PKNotifier: PKNotificationHandler {
+    
+    /// Shared instance of `PKNotifier`. You'll most probably want to use this except you know otherwise.
     public static let standard = PKNotifier()
     
+    /**
+     The notification category which is triggered.
+     This can be used in your App Extension to decide if the notification needs further processing.
+     See `[UNNotificationCategory](https://developer.apple.com/documentation/usernotifications/unnotificationcategory)`.
+    */
     enum NotificationCategoryIdentifier: String {
         case giphyNotification = "giphyNotification"
     }
@@ -56,6 +67,7 @@ public class PKNotifier: PKNotificationHandler {
         self.userNotificationCenter = userNotificationCenter
     }
     
+    /// Request user authorization in order to be able to send notifications. Uses the userNotificationCenter from `Progress.configure(...)`.
     public func requestAuthorization(completionHandler: @escaping ((Bool, Error?) -> Void)){
         guard let userNotificationCenter = self.userNotificationCenter else {
             completionHandler(false, nil)
@@ -64,6 +76,7 @@ public class PKNotifier: PKNotificationHandler {
         userNotificationCenter.requestAuthorization(options: [.alert, .sound], completionHandler: completionHandler)
     }
     
+    /// Retrieve the authorizationStatus using the userNotificationCenter from `Progress.configure(...)`.
     public func authorizationStatus(completionHandler: @escaping ((UNAuthorizationStatus) -> Void)){
         guard let userNotificationCenter = self.userNotificationCenter else {
             completionHandler(.notDetermined)
@@ -74,6 +87,7 @@ public class PKNotifier: PKNotificationHandler {
         }
     }
     
+    /// Sends all due userNotifications. For this, all reports stored in `PKReportStore` are evaluated against the reminders stored in `PKReminderStore`. You most probably want to call this from a background thread in your app.
     public func sendUserNotificationsWhereNeeded(reportStore: PKReportStore, reminderStore: PKReminderStore, completionHandler: (([PKStatus], [Error]) -> Void)? = nil){
     	purgeSentUserNotifications()
     	
@@ -105,7 +119,7 @@ public class PKNotifier: PKNotificationHandler {
         completionHandler?(allStatus, allErrors)
     }
 
-    
+    /// Send due userNotifications for a given report which is evaluated against the reminders stored in `PKReminderStore`. This function is called by `PKNotifier.sendUserNotificationsWhereNeeded(...)`.
     public func sendUserNotificationIfNeeded(for report: PKReport, of reminderStore: PKReminderStore, completionHandler: ((PKStatus?, Error?) -> Void)? = nil) {
         
         guard report.notificationsEnabled ?? false else {
@@ -267,7 +281,7 @@ public class PKNotifier: PKNotificationHandler {
         }
     }
     
-    
+    /// Effectively sends a userNotification for a given `PKStatus`. This method is called by `PKNotifier.sendUserNotificationIfNeeded(...)` if needed.
     func send(userNotification: PKUserNotification, for status: PKStatus, completionHandler: ((Error?) -> Void)? = nil) {
         guard let userNotificationCenter = self.userNotificationCenter else {
             completionHandler?(nil)
