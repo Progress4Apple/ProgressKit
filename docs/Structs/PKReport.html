@@ -14,7 +14,7 @@
     <a title="PKReport Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ProgressKit 1.0 Docs</a> (0% documented)</p>
+        <p><a href="../index.html">ProgressKit 1.0 Docs</a> (57% documented)</p>
         <p class="header-right"><a href="https://github.com/Progress4Apple/ProgressKit"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsdk%2Eprogress%2Erocks%2Fdocsets%2FProgressKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -88,7 +88,7 @@
                 <a href="../Enums/PKNotification.html">PKNotification</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/PKNotification.html#/Token">– Token</a>
+                <a href="../Enums/PKNotification.html#/s:11ProgressKit14PKNotificationO5TokenC">– Token</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/PKTimeRange.html">PKTimeRange</a>
@@ -134,6 +134,12 @@
         <section>
           <section class="section">
             <h1>PKReport</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PKReport</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
             <p>A user defined report which is the heart of any progress calculation.
 A <code>PKReport</code> declares which goal the user want to achieve within a <code><a href="../Enums/PKTimeRange.html">PKTimeRange</a></code>.</p>
 
@@ -144,9 +150,9 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV10identifierSSvp"></a>
                     <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
-                    <a class="token" href="#/">identifier</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV10identifierSSvp">identifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -157,15 +163,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Unique identifier of <code>PKReport</code>.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L36">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV12displayStyleAA09PKDisplayE0Ovp"></a>
                     <a name="//apple_ref/swift/Property/displayStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/">displayStyle</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV12displayStyleAA09PKDisplayE0Ovp">displayStyle</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,15 +193,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Defines how the <code>PKReport</code> should be rendered. Either a bar which shows the current progres, or a bar which shows the remaining amount of work.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">displayStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/PKDisplayStyle.html">PKDisplayStyle</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L39">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV14listIdentifierSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/listIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/">listIdentifier</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV14listIdentifierSSSgvp">listIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -195,15 +223,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Unique identifier of an Apple Reminder list. See <a href="https://developer.apple.com/documentation/eventkit/ekcalendar/1507380-calendaridentifier"><code>EKCalendar.calendarIdentifier</code></a>.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">listIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L42">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV10searchTermSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/searchTerm" class="dashAnchor"></a>
-                    <a class="token" href="#/">searchTerm</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV10searchTermSSSgvp">searchTerm</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,15 +253,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>A search term which should be used to match Apple Reminders against this <code>PKReport</code>. IMPORTANT: The text needs to be part of the reminders title.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">searchTerm</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L45">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV15isPriorityBasedSbvp"></a>
                     <a name="//apple_ref/swift/Property/isPriorityBased" class="dashAnchor"></a>
-                    <a class="token" href="#/">isPriorityBased</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV15isPriorityBasedSbvp">isPriorityBased</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -233,15 +283,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Whether or not to calculate the progress of this <code>PKReport</code> based upon Apple Reminder priorities.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isPriorityBased</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L48">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV9timeRangeAA06PKTimeE0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/timeRange" class="dashAnchor"></a>
-                    <a class="token" href="#/">timeRange</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV9timeRangeAA06PKTimeE0OSgvp">timeRange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,15 +313,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>The time range in which the desired goal should be achieved. If <code>nil</code> the <code>overall</code> time range is used.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeRange</span><span class="p">:</span> <span class="kt"><a href="../Enums/PKTimeRange.html">PKTimeRange</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L51">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV8deadline10Foundation4DateVSgvp"></a>
                     <a name="//apple_ref/swift/Property/deadline" class="dashAnchor"></a>
-                    <a class="token" href="#/">deadline</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV8deadline10Foundation4DateVSgvp">deadline</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,15 +343,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Deadline of this report if any.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deadline</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L54">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV4goalSiSgvp"></a>
                     <a name="//apple_ref/swift/Property/goal" class="dashAnchor"></a>
-                    <a class="token" href="#/">goal</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV4goalSiSgvp">goal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,15 +373,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>The desired goal, the user wants to achieve. If <code>nil</code> the desired goal is to complete all matched Apple Reminders.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">goal</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L57">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV17showInTodayScreenSbvp"></a>
                     <a name="//apple_ref/swift/Property/showInTodayScreen" class="dashAnchor"></a>
-                    <a class="token" href="#/">showInTodayScreen</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV17showInTodayScreenSbvp">showInTodayScreen</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -309,15 +403,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>If this <code>PKReport</code> should be rendered in the Today Screen Widget.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">showInTodayScreen</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L60">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV20notificationsEnabledSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/notificationsEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/">notificationsEnabled</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV20notificationsEnabledSbSgvp">notificationsEnabled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -328,15 +433,26 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Whether or not the user wants to receive notifications regarding this report.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationsEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L63">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV10identifier12displayStyle14listIdentifier10searchTerm15isPriorityBased9timeRange8deadline4goal17showInTodayScreen20notificationsEnabledACSS_AA09PKDisplayF0OSSSgAPSbAA06PKTimeO0OSg10Foundation4DateVSgSiSgS2bSgtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(identifier:displayStyle:listIdentifier:searchTerm:isPriorityBased:timeRange:deadline:goal:showInTodayScreen:notificationsEnabled:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">init(identifier:displayStyle:listIdentifier:searchTerm:isPriorityBased:timeRange:deadline:goal:showInTodayScreen:notificationsEnabled:)</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV10identifier12displayStyle14listIdentifier10searchTerm15isPriorityBased9timeRange8deadline4goal17showInTodayScreen20notificationsEnabledACSS_AA09PKDisplayF0OSSSgAPSbAA06PKTimeO0OSg10Foundation4DateVSgSiSgS2bSgtcfc">init(identifier:displayStyle:listIdentifier:searchTerm:isPriorityBased:timeRange:deadline:goal:showInTodayScreen:notificationsEnabled:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -346,6 +462,28 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                       <div class="abstract">
                         <p>Convenience constructor which initializes all properties.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="nv">displayStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/PKDisplayStyle.html">PKDisplayStyle</a></span><span class="p">,</span>
+    <span class="nv">listIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+    <span class="nv">searchTerm</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+    <span class="nv">isPriorityBased</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+    <span class="nv">timeRange</span><span class="p">:</span> <span class="kt"><a href="../Enums/PKTimeRange.html">PKTimeRange</a></span><span class="p">?,</span>
+    <span class="nv">deadline</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span>
+    <span class="nv">goal</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span>
+    <span class="nv">showInTodayScreen</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+    <span class="nv">notificationsEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L66-L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -357,9 +495,9 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:11ProgressKit8PKReportV4hash4intoys6HasherVz_tF"></a>
                     <a name="//apple_ref/swift/Method/hash(into:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">hash(into:)</a>
+                    <a class="token" href="#/s:11ProgressKit8PKReportV4hash4intoys6HasherVz_tF">hash(into:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -370,6 +508,17 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
                         <p>Makes <code>PKReport</code> conforming to the <a href="https://developer.apple.com/documentation/swift/hashable"><code>Hashable</code> protocol</a>.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span><span class="n">into</span> <span class="nv">hasher</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Hasher</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/1.0/ProgressKit/Model/PKReport.swift#L108-L110">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -378,7 +527,7 @@ A <code>PKReport</code> declares which goal the user want to achieve within a <c
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-14)</p>
+          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

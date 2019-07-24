@@ -32,14 +32,21 @@ import NotificationCenter
  */
 open class ProgressCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSourcePrefetching {
     
+    /// All currently loaded `PKReport`s provided by the dataSource, grouped by section.
     private (set) public var allReports: [[PKReport]] = []
+    
+    /// The `PKReport` currently selected by the user if any.
     private (set) public var selectedReport: PKReport?
     
+    /// `ProgressCollectionViewControllerDataSource` for the ViewController.
     public var dataSource: ProgressCollectionViewControllerDataSource?
+    
+    /// `ProgressCollectionViewControllerDelegate` for the ViewController.
     public var delegate: ProgressCollectionViewControllerDelegate?
     
     private var notificationToken: PKNotification.Token?
     
+    /// Helper function which determines the desired `PKLayoutStyle` based upon a given [`UITraitCollection`](https://developer.apple.com/documentation/uikit/uitraitcollection).
     public func layoutStyle(for traitCollection: UITraitCollection) -> PKLayoutStyle {
         return traitCollection.horizontalSizeClass == .regular ? .grid : .table
     }

@@ -13,7 +13,7 @@
     <a title="Getting Started  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ProgressKit 1.0 Docs</a> (0% documented)</p>
+        <p><a href="index.html">ProgressKit 1.0 Docs</a> (57% documented)</p>
         <p class="header-right"><a href="https://github.com/Progress4Apple/ProgressKit"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsdk%2Eprogress%2Erocks%2Fdocsets%2FProgressKit%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -87,7 +87,7 @@
                 <a href="Enums/PKNotification.html">PKNotification</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/PKNotification.html#/Token">– Token</a>
+                <a href="Enums/PKNotification.html#/s:11ProgressKit14PKNotificationO5TokenC">– Token</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/PKTimeRange.html">PKTimeRange</a>
@@ -136,37 +136,12 @@
             <h1 id='getting-started' class='heading'>Getting Started</h1>
 
 <p>These instructions will get you a up and running to use <code>ProgressKit</code> in your own app.</p>
-<h2 id='prerequisites' class='heading'>Prerequisites</h2>
-
-<p>Make sure you have the following installed on your system to kick things off:</p>
-
-<ul>
-<li><a href="https://developer.apple.com/xcode/">Xcode 10.2+</a></li>
-<li>iOS 12+</li>
-<li><a href="https://swift.org/getting-started/">Swift 5+</a></li>
-<li><a href="https://github.com/Carthage/Carthage#installing-carthage">Carthage</a></li>
-<li><a href="https://github.com/realm/jazzy">Jazzy</a></li>
-</ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>To add <code>ProgressKit</code> as Carthage dependency insert the following line to your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "Progress4Apple/ProgressKit" ~&gt; 1.0
-</code></pre>
+<p>See the Getting Started section of the README for how to install <code>ProgressKit</code>.</p>
+<h2 id='configuration' class='heading'>Configuration</h2>
 
-<p>Let <code>Carthage</code> download and compile the library by executing the following command:</p>
-<pre class="highlight plaintext"><code>carthage bootstrap --platform iOS
-</code></pre>
-
-<p>As last step add the built libraries in Xcode. See <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application"><q>Adding frameworks to an application</q> in the Carthage documentation for further details</a>:</p>
-
-<ul>
-<li><code>ProgressKit.framework</code></li>
-<li><code>FLAnimatedImage.framework</code></li>
-<li><code>GiphyCoreSDK.framework</code></li>
-</ul>
-<h2 id='usage' class='heading'>Usage</h2>
-
-<p>Import <code>ProgressKit</code> and call <code><a href="Classes/Progress.html#/configure(suiteName:userNotificationCenter:giphyApiKey:)">Progress.configure(...)</a></code> in <code>application(_:didFinishLaunchingWithOptions:)</code> of your AppDelegate.swift for initialization:</p>
+<p>Import <code>ProgressKit</code> and call <code><a href="Classes/Progress.html#/s:11ProgressKit0A0C9configure9suiteName22userNotificationCenter11giphyApiKeyySSSg_So06UNUsergH0CSgSStFZ">Progress.configure(...)</a></code> in <code>application(_:didFinishLaunchingWithOptions:)</code> of your AppDelegate.swift for initialization:</p>
 <pre class="highlight plaintext"><code>import UserNotifications
 import ProgressKit
 
@@ -183,11 +158,137 @@ func application(_ application: UIApplication,
         giphyApiKey: "your-giphy-api-key"
     )
 </code></pre>
+<h2 id='create-a-viewcontroller' class='heading'>Create a ViewController</h2>
+
+<p>To render the progress bars for the available reports, create a new <code>UICollectionViewController</code> in your app and subclass the <code><a href="Classes/ProgressCollectionViewController.html">ProgressCollectionViewController</a></code>:</p>
+<pre class="highlight plaintext"><code>import UIKit
+import ProgressKit
+
+class ViewController: ProgressCollectionViewController {
+    ...
+}
+</code></pre>
+<h2 id='set-delegate-and-datasource' class='heading'>Set delegate and dataSource</h2>
+
+<p>Make sure you set the ViewController&rsquo;s delegate and dataSource objects In your <code>viewDidLoad</code>. To begin with, we set both to <code>self</code>:</p>
+<pre class="highlight plaintext"><code>import UIKit
+import ProgressKit
+
+class ViewController: ProgressCollectionViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        delegate = self
+        dataSource = self
+    }
+}
+</code></pre>
+
+<p>Then we make sure our ViewController conforms to <code><a href="Protocols/ProgressCollectionViewControllerDelegate.html">ProgressCollectionViewControllerDelegate</a></code>:</p>
+<pre class="highlight plaintext"><code>import UIKit
+import ProgressKit
+import EventKit
+
+class ViewController: ProgressCollectionViewController, ProgressCollectionViewControllerDelegate {
+    ...
+
+    // MARK: ProgressCollectionViewControllerDelegate
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        handleAuthorizationStatusNotSufficient status: EKAuthorizationStatus
+    ) {
+    // TODO: Insert your implementation here.
+    }
+
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        didSelectReport report: PKReport
+    ) {
+        // TODO: Insert your implementation here.
+    }
+
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        handleError error: Error
+    ) {
+        // TODO: Insert your implementation here.
+    }
+
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        openPreferencesAtURL url: URL,
+        completionHandler: @escaping ((Bool) -&gt; Void)
+    ) {
+        UIApplication.shared.open(url, options: [:], completionHandler: completionHandler)
+    }
+}
+</code></pre>
+
+<p>&hellip; and finally, our ViewController should also conform to <code><a href="Protocols/ProgressCollectionViewControllerDataSource.html">ProgressCollectionViewControllerDataSource</a></code>:</p>
+<pre class="highlight plaintext"><code>import UIKit
+import ProgressKit
+import EventKit
+
+class ViewController: ProgressCollectionViewController, ProgressCollectionViewControllerDelegate, ProgressCollectionViewControllerDataSource {
+    ...
+
+    // MARK: ProgressCollectionViewControllerDataSource
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        loadReports completionHandler: ([[PKReport]]?, Error?) -&gt; Void
+    ) {
+        let report = PKReport(
+            identifier: "1234",
+            displayStyle: .progress,
+            listIdentifier: nil,
+            searchTerm: nil,
+            isPriorityBased: false,
+            timeRange: nil,
+            deadline: nil,
+            goal: nil,
+            showInTodayScreen: false,
+            notificationsEnabled: false
+        )
+        let reportSection = [report]
+
+        var allReports = [[PKReport]]()
+        allReports.append(reportSection)
+
+        completionHandler(allReports, nil)
+    }
+
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        shouldReload completionHandler: ((Bool) -&gt; Void)
+    ) {
+        completionHandler(true)
+    }
+
+
+    func progressCollection(
+        _ viewController: ProgressCollectionViewController,
+        saveReports reports: [[PKReport]],
+        completionHandler: ((Bool, Error?) -&gt; Void)
+    ) {
+        // TODO: Insert your implementation here.
+    }
+}
+</code></pre>
+<h2 id='next-steps' class='heading'>Next steps</h2>
+
+<p>There you go. That&rsquo;s the bare minimum you need to render reports. As next step you may want to add your implementation for saving and loading reports so the user is able to configure those. For this have a look at <code><a href="Classes/PKReportStore.html#/s:11ProgressKit13PKReportStoreC8standardACvpZ">PKReportStore.standard</a></code> which makes it easy to persist and query reports to/from disk.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-14)</p>
+          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

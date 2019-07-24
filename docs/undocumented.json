@@ -1,6 +1,516 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/Model/PKLayoutStyle.swift",
+      "line": 37,
+      "symbol": "PKLayoutStyle.itemSize(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/Model/PKLayoutStyle.swift",
+      "line": 46,
+      "symbol": "PKLayoutStyle.collectionViewEdgeInsets",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/Model/PKLayoutStyle.swift",
+      "line": 55,
+      "symbol": "PKLayoutStyle.collectionViewLineSpacing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/Model/PKMessageStore.swift",
+      "line": 45,
+      "symbol": "PKMessageStore.init(_:pathForResource:ofType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionBackgroundView/ProgressCollectionBackgroundView.swift",
+      "line": 32,
+      "symbol": "ProgressCollectionBackgroundView.imageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionBackgroundView/ProgressCollectionBackgroundView.swift",
+      "line": 33,
+      "symbol": "ProgressCollectionBackgroundView.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionBackgroundView/ProgressCollectionBackgroundView.swift",
+      "line": 34,
+      "symbol": "ProgressCollectionBackgroundView.detailLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionBackgroundView/ProgressCollectionBackgroundView.swift",
+      "line": 35,
+      "symbol": "ProgressCollectionBackgroundView.titleLabelCenterYConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionBackgroundView/ProgressCollectionBackgroundView.swift",
+      "line": 38,
+      "symbol": "ProgressCollectionBackgroundView.titleTextColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionBackgroundView/ProgressCollectionBackgroundView.swift",
+      "line": 44,
+      "symbol": "ProgressCollectionBackgroundView.detailTextColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 32,
+      "symbol": "ProgressCollectionCell.stackView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 33,
+      "symbol": "ProgressCollectionCell.leadingTitleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 34,
+      "symbol": "ProgressCollectionCell.activityIndicator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 35,
+      "symbol": "ProgressCollectionCell.trailingTitleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 36,
+      "symbol": "ProgressCollectionCell.leadingDetailLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 37,
+      "symbol": "ProgressCollectionCell.trailingDetailLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 38,
+      "symbol": "ProgressCollectionCell.progressView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 39,
+      "symbol": "ProgressCollectionCell.progressViewHeightConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 40,
+      "symbol": "ProgressCollectionCell.progressViewTopMarginConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 41,
+      "symbol": "ProgressCollectionCell.progressViewCenterYConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 43,
+      "symbol": "ProgressCollectionCell.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 44,
+      "symbol": "ProgressCollectionCell.representedId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 46,
+      "symbol": "ProgressCollectionCell.isLoading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 67,
+      "symbol": "ProgressCollectionCell.tintColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 101,
+      "symbol": "ProgressCollectionCell.tintShadowColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 112,
+      "symbol": "ProgressCollectionCell.displayStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 138,
+      "symbol": "ProgressCollectionCell.layoutStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 148,
+      "symbol": "ProgressCollectionCell.borderWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 153,
+      "symbol": "ProgressCollectionCell.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 158,
+      "symbol": "ProgressCollectionCell.trackColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 163,
+      "symbol": "ProgressCollectionCell.textColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 181,
+      "symbol": "ProgressCollectionCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 192,
+      "symbol": "ProgressCollectionCell.configure(with:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 237,
+      "symbol": "ProgressCollectionCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/ProgressCollectionCell.swift",
+      "line": 251,
+      "symbol": "ProgressCollectionCell.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/UnicodeLabel.swift",
+      "line": 28,
+      "symbol": "UnicodeLabel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/UnicodeLabel.swift",
+      "line": 34,
+      "symbol": "UnicodeLabel.textColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/UnicodeLabel.swift",
+      "line": 46,
+      "symbol": "UnicodeLabel.shadowColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/UnicodeLabel.swift",
+      "line": 60,
+      "symbol": "UnicodeLabel.shadowOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionCell/UnicodeLabel.swift",
+      "line": 74,
+      "symbol": "UnicodeLabel.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionSectionHeader/ProgressCollectionSectionHeader.swift",
+      "line": 35,
+      "symbol": "ProgressCollectionSectionHeader.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionSectionHeader/ProgressCollectionSectionHeader.swift",
+      "line": 38,
+      "symbol": "ProgressCollectionSectionHeader.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionSectionHeader/ProgressCollectionSectionHeader.swift",
+      "line": 43,
+      "symbol": "ProgressCollectionSectionHeader.borderWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionSectionHeader/ProgressCollectionSectionHeader.swift",
+      "line": 47,
+      "symbol": "ProgressCollectionSectionHeader.layoutStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionSectionHeader/ProgressCollectionSectionHeader.swift",
+      "line": 51,
+      "symbol": "ProgressCollectionSectionHeader.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 54,
+      "symbol": "ProgressCollectionViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 60,
+      "symbol": "ProgressCollectionViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 70,
+      "symbol": "ProgressCollectionViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 140,
+      "symbol": "ProgressCollectionViewController.reloadData(completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 197,
+      "symbol": "ProgressCollectionViewController.collectionView(_:prefetchItemsAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 244,
+      "symbol": "ProgressCollectionViewController.willTransition(to:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 251,
+      "symbol": "ProgressCollectionViewController.viewWillTransition(to:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 262,
+      "symbol": "ProgressCollectionViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 266,
+      "symbol": "ProgressCollectionViewController.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 270,
+      "symbol": "ProgressCollectionViewController.collectionView(_:viewForSupplementaryElementOfKind:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 298,
+      "symbol": "ProgressCollectionViewController.collectionView(_:layout:referenceSizeForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 313,
+      "symbol": "ProgressCollectionViewController.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 352,
+      "symbol": "ProgressCollectionViewController.collectionView(_:didSelectItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 358,
+      "symbol": "ProgressCollectionViewController.collectionView(_:canMoveItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 362,
+      "symbol": "ProgressCollectionViewController.collectionView(_:targetIndexPathForMoveFromItemAt:toProposedIndexPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 369,
+      "symbol": "ProgressCollectionViewController.collectionView(_:moveItemAt:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 393,
+      "symbol": "ProgressCollectionViewController.collectionView(_:layout:sizeForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 397,
+      "symbol": "ProgressCollectionViewController.collectionView(_:layout:insetForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewController.swift",
+      "line": 401,
+      "symbol": "ProgressCollectionViewController.collectionView(_:layout:minimumLineSpacingForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDataSource.swift",
+      "line": 32,
+      "symbol": "ProgressCollectionViewControllerDataSource.progressCollection(_:loadReports:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDataSource.swift",
+      "line": 33,
+      "symbol": "ProgressCollectionViewControllerDataSource.progressCollection(_:shouldReload:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDataSource.swift",
+      "line": 34,
+      "symbol": "ProgressCollectionViewControllerDataSource.progressCollection(_:saveReports:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDelegate.swift",
+      "line": 32,
+      "symbol": "ProgressCollectionViewControllerDelegate.progressCollection(_:handleError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDelegate.swift",
+      "line": 33,
+      "symbol": "ProgressCollectionViewControllerDelegate.progressCollection(_:handleAuthorizationStatusNotSufficient:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDelegate.swift",
+      "line": 34,
+      "symbol": "ProgressCollectionViewControllerDelegate.progressCollection(_:didSelectReport:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/ProgressCollectionViewController/ProgressCollectionViewControllerDelegate.swift",
+      "line": 35,
+      "symbol": "ProgressCollectionViewControllerDelegate.progressCollection(_:openPreferencesAtURL:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/WatermarkAnimatedImageView/WatermarkAnimatedImageView.swift",
+      "line": 31,
+      "symbol": "WatermarkAnimatedImageView.watermarkImageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marbetschar/Development/Progress/ProgressKit/ProgressKit/WatermarkAnimatedImageView/WatermarkAnimatedImageView.swift",
+      "line": 33,
+      "symbol": "WatermarkAnimatedImageView.loadFromNib(bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/marbetschar/Development/Progress/ProgressKit"
 }
