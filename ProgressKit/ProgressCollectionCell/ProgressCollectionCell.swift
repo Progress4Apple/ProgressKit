@@ -70,7 +70,11 @@ import UIKit
             super.tintColor = newValue
             
             leadingTitleLabel?.textColor = newValue
-            leadingTitleLabel?.shadowColor = tintShadowColor
+            if #available(iOS 13.0, *) {
+                // no more shadows on iOS 13 and above
+            } else {
+                leadingTitleLabel?.shadowColor = tintShadowColor
+            }
             progressView?.tintColor = newValue
             
             switch displayStyle {
@@ -79,20 +83,34 @@ import UIKit
                 progressView?.trackTintColor = trackColor
                 
                 leadingDetailLabel?.textColor = newValue
-                leadingDetailLabel?.shadowColor = tintShadowColor
-                
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingDetailLabel?.shadowColor = tintShadowColor
+                }
                 trailingDetailLabel?.textColor = textColor
-                trailingDetailLabel?.shadowColor = nil
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    trailingDetailLabel?.shadowColor = nil
+                }
                 
             case .remaining:
                 progressView?.progressTintColor = trackColor
                 progressView?.trackTintColor = newValue
                 
                 leadingDetailLabel?.textColor = textColor
-                leadingDetailLabel?.shadowColor = nil
-                
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingDetailLabel?.shadowColor = nil
+                }
                 trailingDetailLabel?.textColor = newValue
-                trailingDetailLabel?.shadowColor = tintShadowColor
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    trailingDetailLabel?.shadowColor = tintShadowColor
+                }
             }
             
         }
@@ -117,20 +135,35 @@ import UIKit
                 progressView?.trackTintColor = trackColor
                 
                 leadingDetailLabel?.textColor = tintColor
-                leadingDetailLabel?.shadowColor = tintShadowColor
-                
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingDetailLabel?.shadowColor = tintShadowColor
+                }
                 trailingDetailLabel?.textColor = textColor
-                trailingDetailLabel?.shadowColor = nil
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    trailingDetailLabel?.shadowColor = nil
+                }
             
             case .remaining:
                 progressView?.progressTintColor = trackColor
                 progressView?.trackTintColor = tintColor
                 
                 leadingDetailLabel?.textColor = textColor
-                leadingDetailLabel?.shadowColor = nil
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingDetailLabel?.shadowColor = nil
+                }
                 
                 trailingDetailLabel?.textColor = tintColor
-                trailingDetailLabel?.shadowColor = tintShadowColor
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    trailingDetailLabel?.shadowColor = tintShadowColor
+                }
             }
         }
     }
@@ -160,20 +193,41 @@ import UIKit
     }
     
     // MARK: "@objc dynamic" adds UIAppearance support
-    @objc dynamic public var textColor = UIColor.lightText {
+    @objc dynamic public var textColor: UIColor = {
+            if #available(iOS 13.0, *) {
+                return UIColor.label
+            }
+            return UIColor.lightText
+        }() {
         didSet {
             switch displayStyle {
             case .progress:
-                leadingTitleLabel?.shadowColor = tintShadowColor
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingTitleLabel?.shadowColor = tintShadowColor
+                }
                 trailingTitleLabel?.textColor = textColor
-                leadingDetailLabel?.shadowColor = tintShadowColor
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingDetailLabel?.shadowColor = tintShadowColor
+                }
                 trailingDetailLabel?.textColor = textColor
                 
             case .remaining:
-                leadingTitleLabel?.shadowColor = tintShadowColor
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    leadingTitleLabel?.shadowColor = tintShadowColor
+                }
                 trailingTitleLabel?.textColor = textColor
                 leadingDetailLabel?.textColor = textColor
-                trailingDetailLabel?.shadowColor = tintShadowColor
+                if #available(iOS 13.0, *) {
+                    // no more shadows on iOS 13 and above
+                } else {
+                    trailingDetailLabel?.shadowColor = tintShadowColor
+                }
             }
         }
     }
@@ -183,7 +237,11 @@ import UIKit
         selectedBackgroundView = UIView()
         
         leadingTitleLabel?.textColor = tintColor
-        leadingTitleLabel?.shadowColor = tintShadowColor
+        if #available(iOS 13.0, *) {
+            // no more shadows on iOS 13 and above
+        } else {
+            leadingTitleLabel?.shadowColor = tintShadowColor
+        }
         progressView?.progressTintColor = tintColor
         progressView?.trackTintColor = trackColor
     }

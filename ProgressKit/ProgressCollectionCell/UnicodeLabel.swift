@@ -72,6 +72,11 @@ open class UnicodeLabel: UILabel {
     }
     
     open override func draw(_ rect: CGRect) {
+        // no more shadows on iOS 13 and above
+        if #available(iOS 13.0, *) {
+            super.draw(rect)
+            return
+        }
         let textAttributes = attributes
         
         let unicodeShadow = NSShadow()
