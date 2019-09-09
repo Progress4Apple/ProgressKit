@@ -13,7 +13,7 @@
     <a title="Getting Started  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ProgressKit 1.0 Docs</a> (57% documented)</p>
+        <p><a href="index.html">ProgressKit 1.0 Docs</a> (0% documented)</p>
         <p class="header-right"><a href="https://github.com/Progress4Apple/ProgressKit"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsdk%2Eprogress%2Erocks%2Fdocsets%2FProgressKit%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -36,97 +36,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/PKMessageStore.html">PKMessageStore</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/PKNotifier.html">PKNotifier</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/PKReminderStore.html">PKReminderStore</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/PKReportStore.html">PKReportStore</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/Progress.html">Progress</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ProgressCollectionBackgroundView.html">ProgressCollectionBackgroundView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ProgressCollectionCell.html">ProgressCollectionCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ProgressCollectionSectionHeader.html">ProgressCollectionSectionHeader</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ProgressCollectionViewController.html">ProgressCollectionViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnicodeLabel.html">UnicodeLabel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/WatermarkAnimatedImageView.html">WatermarkAnimatedImageView</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Enums/PKDisplayStyle.html">PKDisplayStyle</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/PKLayoutStyle.html">PKLayoutStyle</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/PKNotification.html">PKNotification</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/PKNotification.html#/s:11ProgressKit14PKNotificationO5TokenC">– Token</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/PKTimeRange.html">PKTimeRange</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/Calendar.html">Calendar</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/PKNotificationHandler.html">PKNotificationHandler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ProgressCollectionViewControllerDataSource.html">ProgressCollectionViewControllerDataSource</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ProgressCollectionViewControllerDelegate.html">ProgressCollectionViewControllerDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Structs/PKReport.html">PKReport</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/PKStatus.html">PKStatus</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -141,7 +50,7 @@
 <p>See the Getting Started section of the README for how to install <code>ProgressKit</code>.</p>
 <h2 id='configuration' class='heading'>Configuration</h2>
 
-<p>Import <code>ProgressKit</code> and call <code><a href="Classes/Progress.html#/s:11ProgressKit0A0C9configure9suiteName22userNotificationCenter11giphyApiKeyySSSg_So06UNUsergH0CSgSStFZ">Progress.configure(...)</a></code> in <code>application(_:didFinishLaunchingWithOptions:)</code> of your AppDelegate.swift for initialization:</p>
+<p>Import <code>ProgressKit</code> and call <code>Progress.configure(...)</code> in <code>application(_:didFinishLaunchingWithOptions:)</code> of your AppDelegate.swift for initialization:</p>
 <pre class="highlight plaintext"><code>import UserNotifications
 import ProgressKit
 
@@ -160,7 +69,7 @@ func application(_ application: UIApplication,
 </code></pre>
 <h2 id='create-a-viewcontroller' class='heading'>Create a ViewController</h2>
 
-<p>To render the progress bars for the available reports, create a new <code>UICollectionViewController</code> in your app and subclass the <code><a href="Classes/ProgressCollectionViewController.html">ProgressCollectionViewController</a></code>:</p>
+<p>To render the progress bars for the available reports, create a new <code>UICollectionViewController</code> in your app and subclass the <code>ProgressCollectionViewController</code>:</p>
 <pre class="highlight plaintext"><code>import UIKit
 import ProgressKit
 
@@ -185,7 +94,7 @@ class ViewController: ProgressCollectionViewController {
 }
 </code></pre>
 
-<p>Then we make sure our ViewController conforms to <code><a href="Protocols/ProgressCollectionViewControllerDelegate.html">ProgressCollectionViewControllerDelegate</a></code>:</p>
+<p>Then we make sure our ViewController conforms to <code>ProgressCollectionViewControllerDelegate</code>:</p>
 <pre class="highlight plaintext"><code>import UIKit
 import ProgressKit
 import EventKit
@@ -229,7 +138,7 @@ class ViewController: ProgressCollectionViewController, ProgressCollectionViewCo
 }
 </code></pre>
 
-<p>&hellip; and finally, our ViewController should also conform to <code><a href="Protocols/ProgressCollectionViewControllerDataSource.html">ProgressCollectionViewControllerDataSource</a></code>:</p>
+<p>&hellip; and finally, our ViewController should also conform to <code>ProgressCollectionViewControllerDataSource</code>:</p>
 <pre class="highlight plaintext"><code>import UIKit
 import ProgressKit
 import EventKit
@@ -283,12 +192,12 @@ class ViewController: ProgressCollectionViewController, ProgressCollectionViewCo
 </code></pre>
 <h2 id='next-steps' class='heading'>Next steps</h2>
 
-<p>There you go. That&rsquo;s the bare minimum you need to render reports. As next step you may want to add your implementation for saving and loading reports so the user is able to configure those. For this have a look at <code><a href="Classes/PKReportStore.html#/s:11ProgressKit13PKReportStoreC8standardACvpZ">PKReportStore.standard</a></code> which makes it easy to persist and query reports to/from disk.</p>
+<p>There you go. That&rsquo;s the bare minimum you need to render reports. As next step you may want to add your implementation for saving and loading reports so the user is able to configure those. For this have a look at <code>PKReportStore.standard</code> which makes it easy to persist and query reports to/from disk.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-07-24)</p>
+          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-09-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

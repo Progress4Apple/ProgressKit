@@ -51,6 +51,17 @@ open class ProgressCollectionViewController: UICollectionViewController, UIColle
         return traitCollection.horizontalSizeClass == .regular ? .grid : .table
     }
     
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        // as long as this ViewController is:
+        // - NOT displayed in a Today-Widget
+        // - AND we are on a tablet device
+        // we are fine with all interface orientations
+        if false == self is NCWidgetProviding && traitCollection.userInterfaceIdiom == .pad {
+            return .all
+        }
+        return .portrait
+    }
+    
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         guard isMovingFromParent || isBeingDismissed else { return }
