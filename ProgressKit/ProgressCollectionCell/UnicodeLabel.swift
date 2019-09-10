@@ -72,21 +72,20 @@ open class UnicodeLabel: UILabel {
     }
     
     open override func draw(_ rect: CGRect) {
-        // no more shadows on iOS 13 and above
-        if #available(iOS 13.0, *) {
-            super.draw(rect)
-            return
-        }
         let textAttributes = attributes
         
-        let unicodeShadow = NSShadow()
-        unicodeShadow.shadowOffset = CGSize(width: 0, height: 0)
-        unicodeShadow.shadowColor = UIColor.clear
-        var unicodeAttributes: [NSAttributedString.Key: Any] = [
-            .shadow: unicodeShadow
-        ]
+        var unicodeAttributes: [NSAttributedString.Key: Any] = [:]
         if let textColor = textColor{
             unicodeAttributes[.foregroundColor] = textColor
+        }
+        
+        if #available(iOS 13.0, *) {
+            // no more shadows on iOS 13 and above
+        } else {
+            let unicodeShadow = NSShadow()
+            unicodeShadow.shadowOffset = CGSize(width: 0, height: 0)
+            unicodeShadow.shadowColor = UIColor.clear
+            unicodeAttributes[.shadow] = unicodeShadow
         }
         
         let attributedString = NSMutableAttributedString(string: "")
@@ -96,6 +95,7 @@ open class UnicodeLabel: UILabel {
                 attributes: unicodeScalar.isEmoji || unicodeScalar.isZeroWidthJoiner ? unicodeAttributes : textAttributes)
             )
         }
+        
         attributedText = attributedString
         super.draw(rect)
     }

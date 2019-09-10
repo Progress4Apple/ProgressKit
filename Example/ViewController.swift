@@ -13,17 +13,16 @@ import EventKit
 class ViewController: ProgressCollectionViewController,
 ProgressCollectionViewControllerDelegate,
 ProgressCollectionViewControllerDataSource {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        reloadData()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         delegate = self
         dataSource = self
+        
+        // TODO: replace with your own implementation
+        collectionView.isUserInteractionEnabled = false
+        reloadData()
     }
     
     
