@@ -327,7 +327,7 @@ import UIKit
     
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        selectedBackgroundView?.backgroundColor = borderColor
+        selectedBackgroundView?.backgroundColor = borderColor.withAlphaComponent(0.25)
         
         let path: UIBezierPath
         switch layoutStyle {

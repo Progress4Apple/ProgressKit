@@ -21,7 +21,6 @@ ProgressCollectionViewControllerDataSource {
         dataSource = self
         
         // TODO: replace with your own implementation
-        collectionView.isUserInteractionEnabled = false
         reloadData()
     }
     
