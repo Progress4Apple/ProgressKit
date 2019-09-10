@@ -51,17 +51,6 @@ open class ProgressCollectionViewController: UICollectionViewController, UIColle
         return traitCollection.horizontalSizeClass == .regular ? .grid : .table
     }
     
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        // as long as this ViewController is:
-        // - NOT displayed in a Today-Widget
-        // - AND we are on a tablet device
-        // we are fine with all interface orientations
-        if false == self is NCWidgetProviding && traitCollection.userInterfaceIdiom == .pad {
-            return .all
-        }
-        return .portrait
-    }
-    
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         guard isMovingFromParent || isBeingDismissed else { return }
@@ -261,10 +250,8 @@ open class ProgressCollectionViewController: UICollectionViewController, UIColle
     
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        
-        if layoutStyle(for: traitCollection) == .table {
-            collectionView.collectionViewLayout.invalidateLayout() // Called to update the cell sizes to fit the new collection view width
-        }
+        // Called to update the cell sizes to fit the new collection view width
+        collectionView.collectionViewLayout.invalidateLayout()
     }
     
     

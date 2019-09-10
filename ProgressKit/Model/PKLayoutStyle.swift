@@ -38,8 +38,20 @@ public enum PKLayoutStyle {
         switch self {
         case .table:
             return CGSize(width: collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right, height: 72)
+        
         case .grid:
-            return CGSize(width: 256, height: 212)
+            let contentViewWidth = collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right;
+            
+            var columns: CGFloat = 2
+            if contentViewWidth > 1000 {
+                columns = 3
+            }
+            let sizeWidth = (contentViewWidth - columns * (collectionViewEdgeInsets.left + collectionViewEdgeInsets.right)) / columns
+            
+            return CGSize(
+                width: sizeWidth,
+                height: sizeWidth / 16 * 9
+            )
         }
     }
     

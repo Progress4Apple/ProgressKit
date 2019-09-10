@@ -69,53 +69,54 @@ import UIKit
         set {
             super.tintColor = newValue
             
-            leadingTitleLabel?.textColor = newValue
             if #available(iOS 13.0, *) {
-                // no more shadows on iOS 13 and above
+                leadingTitleLabel?.textColor = newValue
+                progressView?.tintColor = newValue
+                
+                switch displayStyle {
+                case .progress:
+                    progressView?.progressTintColor = newValue
+                    progressView?.trackTintColor = trackColor
+                    
+                    leadingDetailLabel?.textColor = newValue
+                    trailingDetailLabel?.textColor = textColor
+                    
+                case .remaining:
+                    progressView?.progressTintColor = trackColor
+                    progressView?.trackTintColor = newValue
+                    
+                    leadingDetailLabel?.textColor = textColor
+                    trailingDetailLabel?.textColor = newValue
+                }
+                
             } else {
+                leadingTitleLabel?.textColor = newValue
                 leadingTitleLabel?.shadowColor = tintShadowColor
-            }
-            progressView?.tintColor = newValue
-            
-            switch displayStyle {
-            case .progress:
-                progressView?.progressTintColor = newValue
-                progressView?.trackTintColor = trackColor
+                progressView?.tintColor = newValue
                 
-                leadingDetailLabel?.textColor = newValue
-                if #available(iOS 13.0, *) {
-                    // no more shadows on iOS 13 and above
-                } else {
+                switch displayStyle {
+                case .progress:
+                    progressView?.progressTintColor = newValue
+                    progressView?.trackTintColor = trackColor
+                    
+                    leadingDetailLabel?.textColor = newValue
                     leadingDetailLabel?.shadowColor = tintShadowColor
-                }
-                trailingDetailLabel?.textColor = textColor
-                if #available(iOS 13.0, *) {
-                    // no more shadows on iOS 13 and above
-                } else {
+                    trailingDetailLabel?.textColor = textColor
                     trailingDetailLabel?.shadowColor = nil
-                }
-                
-            case .remaining:
-                progressView?.progressTintColor = trackColor
-                progressView?.trackTintColor = newValue
-                
-                leadingDetailLabel?.textColor = textColor
-                if #available(iOS 13.0, *) {
-                    // no more shadows on iOS 13 and above
-                } else {
-                    leadingDetailLabel?.shadowColor = nil
-                }
-                trailingDetailLabel?.textColor = newValue
-                if #available(iOS 13.0, *) {
-                    // no more shadows on iOS 13 and above
-                } else {
+                    
+                case .remaining:
+                    progressView?.progressTintColor = trackColor
+                    progressView?.trackTintColor = newValue
+                    
+                    leadingDetailLabel?.textColor = textColor
+                    trailingDetailLabel?.textColor = newValue
                     trailingDetailLabel?.shadowColor = tintShadowColor
                 }
             }
-            
         }
     }
     
+    @available(iOS, introduced: 12, deprecated, message: "Don't use this anymore")
     public var tintShadowColor: UIColor! {
         guard let tintColor = tintColor else { return nil }
         
@@ -306,6 +307,24 @@ import UIKit
         isLoading = true
     }
     
+    public override func updateConstraints() {
+        super.updateConstraints()
+        
+        switch layoutStyle {
+        case .table:
+            stackView?.spacing = 0
+            progressViewHeightConstraint?.constant = 2
+            progressViewCenterYConstraint?.constant = 4
+            progressViewTopMarginConstraint?.constant = 4
+            
+        case .grid:
+            stackView?.spacing = 32
+            progressViewHeightConstraint?.constant = 4
+            progressViewCenterYConstraint?.constant = 72
+            progressViewTopMarginConstraint?.constant = 32
+        }
+    }
+    
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
         selectedBackgroundView?.backgroundColor = borderColor
@@ -322,11 +341,6 @@ import UIKit
                 trailingTitleLabel.font = trailingTitleLabel.font.withSize(24)
             }
             
-            stackView?.spacing = 0
-            progressViewHeightConstraint?.constant = 2
-            progressViewCenterYConstraint?.constant = 4
-            progressViewTopMarginConstraint?.constant = 4
-            
         case .grid:
             path = UIBezierPath(rect: rect)
             
@@ -334,11 +348,6 @@ import UIKit
                 trailingTitleLabel.textAlignment = .center
                 trailingTitleLabel.font = trailingTitleLabel.font.withSize(64)
             }
-            
-            stackView?.spacing = 32
-            progressViewHeightConstraint?.constant = 4
-            progressViewCenterYConstraint?.constant = 72
-            progressViewTopMarginConstraint?.constant = 32
         }
         
         path.lineWidth = borderWidth;
