@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userNotificationCenter: UNUserNotificationCenter.current(),
             giphyApiKey: "your-giphy-api-key"
         )
+        
+        if #available(iOS 13.0, *) {
+            ProgressCollectionCell.appearance().backgroundColor = UIColor.secondarySystemGroupedBackground
+        } else {
+            // Fallback on earlier versions
+        }
+        
         return true
     }
 }

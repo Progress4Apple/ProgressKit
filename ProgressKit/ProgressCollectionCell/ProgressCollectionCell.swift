@@ -237,6 +237,7 @@ import UIKit
     override public func awakeFromNib() {
         super.awakeFromNib()
         selectedBackgroundView = UIView()
+        backgroundView = UIView()
         
         if #available(iOS 13.0, *) {
             // no more shadows and colored labels on iOS 13 and above
@@ -348,6 +349,7 @@ import UIKit
         super.draw(rect)
 
         selectedBackgroundView?.backgroundColor = borderColor.withAlphaComponent(0.25)
+        backgroundView?.backgroundColor = backgroundColor
         borderPath?.removeAllPoints()
 
         switch layoutStyle {
@@ -366,7 +368,6 @@ import UIKit
             borderPath?.stroke()
 
         case .grid:
-            self.layer.backgroundColor = backgroundColor?.cgColor
             self.layer.borderWidth = borderWidth
             self.layer.borderColor = borderColor.cgColor
             self.layer.cornerRadius = 12
