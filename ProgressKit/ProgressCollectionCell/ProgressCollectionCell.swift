@@ -366,6 +366,7 @@ import UIKit
             borderPath?.stroke()
 
         case .grid:
+            self.layer.backgroundColor = backgroundColor?.cgColor
             self.layer.borderWidth = borderWidth
             self.layer.borderColor = borderColor.cgColor
             self.layer.cornerRadius = 12
