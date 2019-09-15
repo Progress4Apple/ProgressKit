@@ -353,6 +353,10 @@ open class ProgressCollectionViewController: UICollectionViewController, UIColle
         delegate?.progressCollection(self, didSelectReport: selectedReport)
     }
     
+    open override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        self.selectedReport = nil
+    }
+    
     override open func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         return true
     }
