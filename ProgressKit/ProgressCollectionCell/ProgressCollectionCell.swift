@@ -368,6 +368,7 @@ import UIKit
         case .grid:
             self.layer.borderWidth = borderWidth
             self.layer.borderColor = borderColor.cgColor
+            self.layer.cornerRadius = 12
 
             if let trailingTitleLabel = trailingTitleLabel {
                 trailingTitleLabel.textAlignment = .center
