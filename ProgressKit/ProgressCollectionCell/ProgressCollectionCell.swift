@@ -349,7 +349,6 @@ import UIKit
         super.draw(rect)
 
         selectedBackgroundView?.backgroundColor = borderColor.withAlphaComponent(0.25)
-        backgroundView?.backgroundColor = backgroundColor
         borderPath?.removeAllPoints()
 
         switch layoutStyle {
@@ -368,9 +367,10 @@ import UIKit
             borderPath?.stroke()
 
         case .grid:
-            self.layer.borderWidth = borderWidth
-            self.layer.borderColor = borderColor.cgColor
-            self.layer.cornerRadius = 12
+            backgroundView?.backgroundColor = backgroundColor
+            layer.borderWidth = borderWidth
+            layer.borderColor = borderColor.cgColor
+            layer.cornerRadius = 12
 
             if let trailingTitleLabel = trailingTitleLabel {
                 trailingTitleLabel.textAlignment = .center
