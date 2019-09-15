@@ -33,7 +33,6 @@
 		797C5EF222D7B61300FA62FF /* UnicodeScalar+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ECF22D7B61200FA62FF /* UnicodeScalar+Emoji.swift */; };
 		797C5EF322D7B61300FA62FF /* ProgressCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797C5ED022D7B61200FA62FF /* ProgressCollectionCell.xib */; };
 		797C5EF422D7B61300FA62FF /* ProgressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED122D7B61200FA62FF /* ProgressCollectionCell.swift */; };
-		797C5EF522D7B61300FA62FF /* ProgressCollectionCell+LayoutStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED222D7B61200FA62FF /* ProgressCollectionCell+LayoutStyle.swift */; };
 		797C5EF622D7B61300FA62FF /* ProgressCollectionBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797C5ED422D7B61200FA62FF /* ProgressCollectionBackgroundView.xib */; };
 		797C5EF722D7B61300FA62FF /* ProgressCollectionBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED522D7B61200FA62FF /* ProgressCollectionBackgroundView.swift */; };
 		797C5EF822D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5ED722D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift */; };
@@ -145,7 +144,6 @@
 		797C5ECF22D7B61200FA62FF /* UnicodeScalar+Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnicodeScalar+Emoji.swift"; sourceTree = "<group>"; };
 		797C5ED022D7B61200FA62FF /* ProgressCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCollectionCell.xib; sourceTree = "<group>"; };
 		797C5ED122D7B61200FA62FF /* ProgressCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionCell.swift; sourceTree = "<group>"; };
-		797C5ED222D7B61200FA62FF /* ProgressCollectionCell+LayoutStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressCollectionCell+LayoutStyle.swift"; sourceTree = "<group>"; };
 		797C5ED422D7B61200FA62FF /* ProgressCollectionBackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCollectionBackgroundView.xib; sourceTree = "<group>"; };
 		797C5ED522D7B61200FA62FF /* ProgressCollectionBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionBackgroundView.swift; sourceTree = "<group>"; };
 		797C5ED722D7B61300FA62FF /* ProgressCollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 				797C5ECF22D7B61200FA62FF /* UnicodeScalar+Emoji.swift */,
 				797C5ED022D7B61200FA62FF /* ProgressCollectionCell.xib */,
 				797C5ED122D7B61200FA62FF /* ProgressCollectionCell.swift */,
-				797C5ED222D7B61200FA62FF /* ProgressCollectionCell+LayoutStyle.swift */,
 			);
 			path = ProgressCollectionCell;
 			sourceTree = "<group>";
@@ -648,7 +645,6 @@
 				797C5EF422D7B61300FA62FF /* ProgressCollectionCell.swift in Sources */,
 				797C5EF122D7B61300FA62FF /* UnicodeLabel.swift in Sources */,
 				797C5EE422D7B61300FA62FF /* PKDisplayStyle.swift in Sources */,
-				797C5EF522D7B61300FA62FF /* ProgressCollectionCell+LayoutStyle.swift in Sources */,
 				797C5EEB22D7B61300FA62FF /* PKMessageStore.swift in Sources */,
 				797C5EF222D7B61300FA62FF /* UnicodeScalar+Emoji.swift in Sources */,
 				797C5EEC22D7B61300FA62FF /* Calendar+PKTimeRange.swift in Sources */,
@@ -878,6 +874,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 101;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -894,6 +891,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.progress.ProgressKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -909,6 +907,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 101;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -925,6 +924,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.progress.ProgressKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -974,6 +974,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 101;
 				DEVELOPMENT_TEAM = 879H52A9GC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -986,6 +987,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.progress.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -998,6 +1000,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 101;
 				DEVELOPMENT_TEAM = 879H52A9GC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1010,6 +1013,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.progress.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -70,7 +70,6 @@ import UIKit
             super.tintColor = newValue
             
             if #available(iOS 13.0, *) {
-                leadingTitleLabel?.textColor = newValue
                 progressView?.tintColor = newValue
                 
                 switch displayStyle {
@@ -135,10 +134,11 @@ import UIKit
                 progressView?.progressTintColor = tintColor
                 progressView?.trackTintColor = trackColor
                 
-                leadingDetailLabel?.textColor = tintColor
                 if #available(iOS 13.0, *) {
-                    // no more shadows on iOS 13 and above
+                    // no more shadows and colored labels on iOS 13 and above
+                    leadingDetailLabel?.textColor = textColor
                 } else {
+                    leadingDetailLabel?.textColor = tintColor
                     leadingDetailLabel?.shadowColor = tintShadowColor
                 }
                 trailingDetailLabel?.textColor = textColor
@@ -159,11 +159,12 @@ import UIKit
                     leadingDetailLabel?.shadowColor = nil
                 }
                 
-                trailingDetailLabel?.textColor = tintColor
                 if #available(iOS 13.0, *) {
-                    // no more shadows on iOS 13 and above
+                    // no more shadows and colored labels on iOS 13 and above
+                    trailingDetailLabel?.textColor = textColor
                 } else {
                     trailingDetailLabel?.shadowColor = tintShadowColor
+                    trailingDetailLabel?.textColor = tintColor
                 }
             }
         }
@@ -237,10 +238,11 @@ import UIKit
         super.awakeFromNib()
         selectedBackgroundView = UIView()
         
-        leadingTitleLabel?.textColor = tintColor
         if #available(iOS 13.0, *) {
-            // no more shadows on iOS 13 and above
+            // no more shadows and colored labels on iOS 13 and above
+            leadingTitleLabel?.textColor = textColor
         } else {
+            leadingTitleLabel?.textColor = tintColor
             leadingTitleLabel?.shadowColor = tintShadowColor
         }
         progressView?.progressTintColor = tintColor
@@ -318,40 +320,59 @@ import UIKit
             progressViewTopMarginConstraint?.constant = 4
             
         case .grid:
-            stackView?.spacing = 32
-            progressViewHeightConstraint?.constant = 4
-            progressViewCenterYConstraint?.constant = 72
-            progressViewTopMarginConstraint?.constant = 32
+            if self.bounds.height > 200 {
+                stackView?.spacing = 32
+                progressViewHeightConstraint?.constant = 4
+                progressViewCenterYConstraint?.constant = 72
+                progressViewTopMarginConstraint?.constant = 32
+            } else {
+                stackView?.spacing = 24
+                progressViewHeightConstraint?.constant = 4
+                progressViewCenterYConstraint?.constant = 64
+                progressViewTopMarginConstraint?.constant = 24
+            }
         }
     }
     
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // triggered by collectionView.collectionViewLayout.invalidateLayout()
+        // so we have a chance to react to orientation changes and update the constraints
+        setNeedsUpdateConstraints()
+    }
+    
+    private var borderPath: UIBezierPath?
+    
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
+
         selectedBackgroundView?.backgroundColor = borderColor.withAlphaComponent(0.25)
-        
-        let path: UIBezierPath
+        borderPath?.removeAllPoints()
+
         switch layoutStyle {
         case .table:
-            path = UIBezierPath()
-            path.move(to: CGPoint(x: layoutMargins.left, y: rect.maxY - borderWidth))
-            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY - borderWidth))
-            
+            borderPath = UIBezierPath()
+            borderPath?.move(to: CGPoint(x: layoutMargins.left, y: rect.maxY - borderWidth))
+            borderPath?.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY - borderWidth))
+
             if let trailingTitleLabel = trailingTitleLabel {
                 trailingTitleLabel.textAlignment = .right
                 trailingTitleLabel.font = trailingTitleLabel.font.withSize(24)
             }
             
+            borderPath?.lineWidth = borderWidth;
+            borderColor.set()
+            borderPath?.stroke()
+
         case .grid:
-            path = UIBezierPath(rect: rect)
-            
+            self.layer.borderWidth = borderWidth
+            self.layer.borderColor = borderColor.cgColor
+
             if let trailingTitleLabel = trailingTitleLabel {
                 trailingTitleLabel.textAlignment = .center
                 trailingTitleLabel.font = trailingTitleLabel.font.withSize(64)
             }
         }
-        
-        path.lineWidth = borderWidth;
-        borderColor.set()
-        path.stroke()
     }
 }
