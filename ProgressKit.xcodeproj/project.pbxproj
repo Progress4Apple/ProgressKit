@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		797C5EA622D7B4C000FA62FF /* ProgressKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797C5E9C22D7B4BF00FA62FF /* ProgressKit.framework */; };
 		797C5EAB22D7B4C000FA62FF /* ProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EAA22D7B4C000FA62FF /* ProgressKitTests.swift */; };
-		797C5EAD22D7B4C000FA62FF /* ProgressKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 797C5E9F22D7B4BF00FA62FF /* ProgressKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		797C5EDE22D7B61300FA62FF /* PKMessages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 797C5EB722D7B61200FA62FF /* PKMessages.plist */; };
 		797C5EDF22D7B61300FA62FF /* PKNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EB922D7B61200FA62FF /* PKNotifier.swift */; };
 		797C5EE022D7B61300FA62FF /* PKUserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5EBB22D7B61200FA62FF /* PKUserNotification.swift */; };
@@ -115,7 +114,6 @@
 /* Begin PBXFileReference section */
 		795BA2A622DB60560099FE1D /* Getting Started.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Getting Started.md"; sourceTree = "<group>"; };
 		797C5E9C22D7B4BF00FA62FF /* ProgressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		797C5E9F22D7B4BF00FA62FF /* ProgressKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressKit.h; sourceTree = "<group>"; };
 		797C5EA022D7B4BF00FA62FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797C5EA522D7B4BF00FA62FF /* ProgressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		797C5EAA22D7B4C000FA62FF /* ProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressKitTests.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 				797C5EDB22D7B61300FA62FF /* ProgressCollectionSectionHeader */,
 				797C5ED622D7B61300FA62FF /* ProgressCollectionViewController */,
 				797C5EC922D7B61200FA62FF /* WatermarkAnimatedImageView */,
-				797C5E9F22D7B4BF00FA62FF /* ProgressKit.h */,
 				797C5EA022D7B4BF00FA62FF /* Info.plist */,
 			);
 			path = ProgressKit;
@@ -400,7 +397,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797C5EAD22D7B4C000FA62FF /* ProgressKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +613,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\nmv \"${PROJECT_DIR}/docs/CNAME\" \"${PROJECT_DIR}/CNAME\"\njazzy --clean \\\n    --documentation=Guides/*.md \\\n    --author \"ProgressKit\" \\\n    --author_url https://progress.rocks \\\n    --github_url https://github.com/Progress4Apple/ProgressKit \\\n    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n    --module-version ${VERSION} \\\n    --xcodebuild-arguments -scheme,${TARGET_NAME} \\\n    --module ${TARGET_NAME} \\\n    --root-url https://sdk.progress.rocks/ \\\n    --output docs \\\n    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\nmv \"${PROJECT_DIR}/CNAME\" \"${PROJECT_DIR}/docs/CNAME\"\n";
+			shellScript = "# homebrew ruby\n#if [ -d \"/usr/local/opt/ruby/bin\" ]; then\n#        export PATH=/usr/local/opt/ruby/bin:$PATH\n#        export PATH=`gem environment gemdir`/bin:$PATH\n#fi\n\n#VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${TARGET_NAME}/Info.plist\"`\n#mv \"${PROJECT_DIR}/docs/CNAME\" \"${PROJECT_DIR}/CNAME\"\n\n#jazzy --clean \\\n#    --author ProgressKit \\\n#    --author_url https://progress.rocks \\\n#    --documentation Guides/*.md \\\n#    --github_url https://github.com/Progress4Apple/ProgressKit \\\n#    --github-file-prefix https://github.com/Progress4Apple/ProgressKit/tree/${VERSION} \\\n#    --module-version ${VERSION} \\\n#    --module ${TARGET_NAME} \\\n#    --root-url https://sdk.progress.rocks/ \\\n#    --output docs \\\n#    --framework-root ${PROJECT_DIR}/${TARGET_NAME}\n    \n#mv \"${PROJECT_DIR}/CNAME\" \"${PROJECT_DIR}/docs/CNAME\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -874,7 +870,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -907,7 +903,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -974,7 +970,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 879H52A9GC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1000,7 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 879H52A9GC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

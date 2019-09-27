@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PKReportStore Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/PKReportStore" class="dashAnchor"></a>
+    <a title="PKReportStore Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ProgressKit $(MARKETING_VERSION) Docs</a> (56% documented)</p>
+        <p class="header-right"><a href="https://github.com/Progress4Apple/ProgressKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsdk%2Eprogress%2Erocks%2Fdocsets%2FProgressKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ProgressKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        PKReportStore Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../getting-started.html">Getting Started</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PKMessageStore.html">PKMessageStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PKNotifier.html">PKNotifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PKReminderStore.html">PKReminderStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PKReportStore.html">PKReportStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Progress.html">Progress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressCollectionBackgroundView.html">ProgressCollectionBackgroundView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressCollectionCell.html">ProgressCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressCollectionSectionHeader.html">ProgressCollectionSectionHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressCollectionViewController.html">ProgressCollectionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnicodeLabel.html">UnicodeLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WatermarkAnimatedImageView.html">WatermarkAnimatedImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/PKDisplayStyle.html">PKDisplayStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PKLayoutStyle.html">PKLayoutStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PKNotification.html">PKNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PKNotification.html#/s:11ProgressKit14PKNotificationO5TokenC">– Token</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PKTimeRange.html">PKTimeRange</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/PKNotificationHandler.html">PKNotificationHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProgressCollectionViewControllerDataSource.html">ProgressCollectionViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProgressCollectionViewControllerDelegate.html">ProgressCollectionViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/PKReport.html">PKReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PKStatus.html">PKStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>PKReportStore</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PKReportStore</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PKNotificationHandler.html">PKNotificationHandler</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Convenience interface which provides CRUD operations for <code>PKReports</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC8standardACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/standard" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC8standardACvpZ">standard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared instance of <code>PKReportStore</code>. You&rsquo;ll most probably want to use this one in your code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">standard</span><span class="p">:</span> <span class="kt">PKReportStore</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC9suiteNameACSSSg_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(suiteName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC9suiteNameACSSSg_tcfc">init(suiteName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the <code>PKReportStore</code> using a given suiteName.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">suiteName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>suiteName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string that names the group whose shared directory you want to obtain. This input should exactly match one of the strings in the app&rsquo;s <a href="https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups">App Groups Entitlement</a>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L42-L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC12lastModified10Foundation4DateVSgyKF"></a>
+                    <a name="//apple_ref/swift/Method/lastModified()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC12lastModified10Foundation4DateVSgyKF">lastModified()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Timestamp when the <code>PKReportStore</code> was last modified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastModified</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L55-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC4save6reportyAA0C0V_tKF"></a>
+                    <a name="//apple_ref/swift/Method/save(report:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC4save6reportyAA0C0V_tKF">save(report:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves a given report to persistent storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="n">report</span> <span class="nv">saveItem</span><span class="p">:</span> <span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L61-L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC4save3allySayAA0C0VG_tKF"></a>
+                    <a name="//apple_ref/swift/Method/save(all:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC4save3allySayAA0C0VG_tKF">save(all:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves all given reports to persistent storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="n">all</span> <span class="nv">reports</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L80-L82">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC6delete6reportyAA0C0V_tKF"></a>
+                    <a name="//apple_ref/swift/Method/delete(report:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC6delete6reportyAA0C0V_tKF">delete(report:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes the given report from the persistent storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">report</span> <span class="nv">deleteItem</span><span class="p">:</span> <span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L86-L96">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC11loadReportsSayAA0C0VGyKF"></a>
+                    <a name="//apple_ref/swift/Method/loadReports()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC11loadReportsSayAA0C0VGyKF">loadReports()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads all reports from persistent storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadReports</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L100-L102">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC11loadReports16withDisplayStyleSayAA0C0VGAA09PKDisplayI0O_tKF"></a>
+                    <a name="//apple_ref/swift/Method/loadReports(withDisplayStyle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC11loadReports16withDisplayStyleSayAA0C0VGAA09PKDisplayI0O_tKF">loadReports(withDisplayStyle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads all reports with a given display style from persistent storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadReports</span><span class="p">(</span><span class="n">withDisplayStyle</span> <span class="nv">displayStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/PKDisplayStyle.html">PKDisplayStyle</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L105-L107">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ProgressKit13PKReportStoreC11loadReports33groupedByTimeRangWithDisplayStyle08filteredH0SaySayAA0C0VGGAA09PKDisplayM0O_SbAHXEtKF"></a>
+                    <a name="//apple_ref/swift/Method/loadReports(groupedByTimeRangWithDisplayStyle:filteredBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ProgressKit13PKReportStoreC11loadReports33groupedByTimeRangWithDisplayStyle08filteredH0SaySayAA0C0VGGAA09PKDisplayM0O_SbAHXEtKF">loadReports(groupedByTimeRangWithDisplayStyle:filteredBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads all reports groupbed by display style and filtered by callback function.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadReports</span><span class="p">(</span><span class="n">groupedByTimeRangWithDisplayStyle</span> <span class="nv">displayStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/PKDisplayStyle.html">PKDisplayStyle</a></span><span class="p">,</span> <span class="n">filteredBy</span> <span class="nv">isIncluded</span><span class="p">:</span> <span class="p">(((</span><span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="k">return</span> <span class="kc">true</span> <span class="p">})</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt"><a href="../Structs/PKReport.html">PKReport</a></span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Progress4Apple/ProgressKit/tree/$(MARKETING_VERSION)/ProgressKit/Model/PKReportStore.swift#L110-L138">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://progress.rocks" target="_blank" rel="external">ProgressKit</a>. All rights reserved. (Last updated: 2019-09-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

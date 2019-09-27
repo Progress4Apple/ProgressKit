@@ -24,6 +24,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Provides an evaluated progress status of a given report.
