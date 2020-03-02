@@ -177,14 +177,18 @@ open class ProgressCollectionViewController: UICollectionViewController, UIColle
                         }
                         
                         guard let allReports = allReports else {
-                            strongSelf.collectionView.reloadData()
+                            DispatchQueue.main.async {
+                                strongSelf.collectionView.reloadData()
+                            }
                             completionHandler?(nil)
                             return
                         }
                         strongSelf.allReports = allReports
                         
-                        strongSelf.collectionView.reloadData()
-                        strongSelf.collectionView.backgroundView?.isHidden = false == self?.allReports.first?.isEmpty
+                        DispatchQueue.main.async {
+                            strongSelf.collectionView.reloadData()
+                            strongSelf.collectionView.backgroundView?.isHidden = false == self?.allReports.first?.isEmpty
+                        }
                         completionHandler?(nil)
                     }
                 })
